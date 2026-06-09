@@ -261,12 +261,12 @@
 
 \begin{frame}{Motivaci\'on: Dise\~no de Trayectorias Bio-inspiradas}
     \begin{itemize}
-        \item \textbf{Limitaci\'on Emp\'irica:} Los mecanismos dise\~nados por tanteo no logran reproducir la complejidad cinem\'atica natural del movimiento humano.
-        \item \textbf{Acoplamiento Complejo:} El movimiento no es lineal; resulta de la interacci\'on coordinada entre m\'ultiples articulaciones.
+        \item \textbf{Limitaci\'on Emp\'irica:} Los mecanismos dise\~nados por tanteo no logran reproducir la complejidad cinem\'atica natural del movimiento humano \cite{ebrahimi2015efficient}.
+        \item \textbf{Acoplamiento Complejo:} El movimiento no es lineal; resulta de la interacci\'on coordinada entre m\'ultiples articulaciones \cite{Cabrera2002}.
     \end{itemize}
 
     \begin{block}{El Rol de la Optimizaci\'on}
-        Permite ajustar las dimensiones geom\'etricas del mecanismo para \textbf{minimizar el error} entre la trayectoria anat\'omica real y la generada por el exoesqueleto.
+        Permite ajustar las dimensiones geom\'etricas del mecanismo para \textbf{minimizar el error} entre la trayectoria anat\'omica real y la generada por el exoesqueleto \cite{deb2012optimization}.
     \end{block}
 
     \vspace{0.3cm}
@@ -365,21 +365,23 @@
     \begin{tabularx}{\textwidth}{|X|c|c|c|c|>{\columncolor[HTML]{FFCE93}}c|c|c|c|}
         \hline
         \rowcolor[HTML]{C0C0C0}
-        \textbf{Criterio} & \textbf{Peso} & \textbf{GD} & \textbf{NR} & \textbf{ML} & \textbf{GA} & \textbf{PSO} & \textbf{SA} & \textbf{DE} \\ \hline
-        Sin derivadas& 20\% & 1 & 1 & 5 & 5 & 5 & 5 & 5 \\ \hline
-        Escape \'opt. locales & 25\% & 1 & 1 & 3 & 5 & 4 & 5 & 5 \\ \hline
-        Restr. (ROM) & 20\% & 2 & 1 & 4 & 5 & 4 & 3 & 4 \\ \hline
-        Estabilidad num. & 15\% & 4 & 2 & 4 & 4 & 5 & 4 & 5 \\ \hline
-        Comp. Implem. & 10\% & 5 & 4 & 3 & 4 & 5 & 4 & 4 \\ \hline
-        Precisi\'on trayec. & 10\% & 3 & 5 & 2 & 5 & 4 & 3 & 4 \\ \hline
+        \textbf{Criterio de Evaluaci\'on} & \textbf{Peso} & \textbf{GD} & \textbf{NR} & \textbf{ML} & \textbf{GA} & \textbf{PSO} & \textbf{SA} & \textbf{DE} \\ \hline
+        No dependencia de derivadas & 20\% & 1 & 1 & 5 & 5 & 5 & 5 & 5 \\ \hline
+        Escape de m\'inimos locales & 25\% & 1 & 1 & 3 & 5 & 4 & 5 & 5 \\ \hline
+        Manejo de restricciones (ROM) & 20\% & 2 & 1 & 4 & 4 & 4 & 3 & 4 \\ \hline
+        Estabilidad num\'erica & 15\% & 4 & 2 & 4 & 4 & 5 & 4 & 5 \\ \hline
+        Complejidad de implementaci\'on & 10\% & 5 & 4 & 3 & 5 & 5 & 4 & 4 \\ \hline
+        Precisi\'on en trayectoria fina & 10\% & 3 & 5 & 2 & 5 & 4 & 3 & 4 \\ \hline
         \rowcolor[HTML]{EFEFEF}
-        \textbf{Puntaje Total} & \textbf{100\%} & \textbf{2.1} & \textbf{2.0} & \textbf{3.6} & \textbf{4.75} & \textbf{4.4} & \textbf{4.2} & \textbf{4.6} \\ \hline
+        \textbf{Puntaje Total} & \textbf{100\%} & \textbf{2.1} & \textbf{2.0} & \textbf{3.6} & \textbf{4.65} & \textbf{4.4} & \textbf{4.2} & \textbf{4.6} \\ \hline
     \end{tabularx}
 
-    \vspace{0.4cm}
+    \vspace{0.2cm}
+    \footnotesize{Nota: Escala de 1 a 5.}
+    \vspace{0.2cm}
     \begin{quote}
         \footnotesize
-        \textbf{Resultado:} El \textbf{Algoritmo Gen\'etico (GA)} es seleccionado con un puntaje de \textbf{4.75}.
+        \textbf{Resultado:} El \textbf{Algoritmo Gen\'etico (GA)} es seleccionado con un puntaje de \textbf{4.65}.
     \end{quote}
 \end{frame}
 

@@ -38,6 +38,17 @@ S.~Pizzolato, L.~Tagliapietra, M.~Cognolato, M.~Reggiani, H.~M{\"u}ller, and
   movement classification tasks,'' {\em Scientific Data}, vol.~4, p.~170151,
   2017.
 
+\bibitem{ebrahimi2015efficient}
+S.~Ebrahimi and P.~Payvandy, ``Efficient constrained synthesis of path
+  generating four-bar mechanisms based on the heuristic optimization
+  algorithms,'' {\em Mechanism and Machine Theory}, vol.~85, pp.~189--204,
+  2015.
+
+\bibitem{Cabrera2002}
+J.~Cabrera, A.~Simon, and M.~Prado, ````{O}ptimal synthesis of mechanisms with
+  genetic algorithms'','' {\em Mechanism and Machine Theory}, vol.~37, no.~1,
+  pp.~1165--1177, 2002.
+
 \bibitem{granada2006}
 E.~Granada, E.~Toro, and Z.~E. Antonio, ````{O}ptimización matemática en
   superficies de desempeño de redes neuronales artificiales'','' {\em Scientia
