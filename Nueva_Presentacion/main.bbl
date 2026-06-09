@@ -144,4 +144,21 @@ X.~J. Liu, J.~Wang, and G.~Pritschow, ``Kinematics, singularity and workspace
   of planar 5r symmetrical parallel mechanisms,'' {\em Mechanism and Machine
   Theory}, vol.~41, no.~2, pp.~145--169, 2006.
 
+\bibitem{price2005differential}
+K.~Price, R.~M. Storn, and J.~A. Lampinen, {\em Differential Evolution: A
+  Practical Approach to Global Optimization}.
+\newblock Berlin, Germany: Springer Science \& Business Media, 2005.
+
+\bibitem{akiba2019optuna}
+T.~Akiba, S.~Sano, T.~Yanase, T.~Ohta, and M.~Koyama, ``Optuna: A
+  next-generation hyperparameter optimization framework,'' in {\em Proceedings
+  of the 25th ACM SIGKDD International Conference on Knowledge Discovery \&
+  Data Mining}, pp.~2623--2631, ACM, 2019.
+
+\bibitem{fan2017chamfer}
+H.~Fan, H.~Su, and L.~J. Guibas, ``A point set generation network for 3d object
+  reconstruction from a single image,'' in {\em Proceedings of the IEEE
+  Conference on Computer Vision and Pattern Recognition (CVPR)}, pp.~605--613,
+  2017.
+
 \end{thebibliography}

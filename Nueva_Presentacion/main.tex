@@ -866,12 +866,11 @@ def hyper_heuristic_mutation(ind):
 \begin{frame}{Resultados: Hiperheur\'istica + AG}
     \scriptsize
     \textbf{Par\'ametros:} Poblaci\'on: 60, Generaciones: 120, Mutaci\'on: 25\%, Cruce: 80\%.
-
-    \textbf{Error RMS final: 0.006 m} (no satisfactorio).
+    \quad \textbf{Error RMS final: 0.006 m} (no satisfactorio).
 
     \begin{figure}
         \centering
-        \includegraphics[width=0.85\linewidth]{imagens/resultado_hiper_AG.png}
+        \includegraphics[width=0.8\linewidth]{imagens/resultado_hiper_AG.png}
         \caption{Resultado del AG con hiperheur\'istica para la articulaci\'on IFP}
         \label{fig:hiper_ag}
     \end{figure}
@@ -879,13 +878,173 @@ def hyper_heuristic_mutation(ind):
     \vspace{-0.2cm}
     \textbf{Problemas identificados:}
     \begin{enumerate}
-        \item \textbf{Alta sensibilidad:} Las ecuaciones de cierre frecuentemente no tienen soluci\'on (penalizaci\'on $10^6$).
-        \item \textbf{Hiperheur\'istica limitada:} Dificultad para mantener simult\'aneamente la trayectoria natural y las restricciones mec\'anicas.
-        \item \textbf{Costo computacional:} Incremento excesivo al intentar reducir el error.
-        \item \textbf{Longitudes no realistas:} Algunas longitudes de eslabones resultaron mayores a 10\,cm, excediendo las dimensiones f\'isicas del dedo.
+        \item Ecuaciones de cierre sin soluci\'on frecuente (penalizaci\'on $10^6$); alta sensibilidad param\'etrica.
+        \item Costo computacional excesivo y eslabones con longitudes no realistas ($>$10\,cm).
+        \item Hiperheur\'istica insuficiente para equilibrar trayectoria natural y restricciones mec\'anicas.
     \end{enumerate}
 
     $\Rightarrow$ Se recurri\'o a \textbf{Evoluci\'on Diferencial (DE)} como alternativa.
+\end{frame}
+
+%-------------------------------------------------------%
+% NUEVAS DIAPOSITIVAS: DE + Optuna
+%-------------------------------------------------------%
+\begin{frame}{Evoluci\'on Diferencial vs.\ Algoritmo Gen\'etico}
+    \scriptsize
+    \textbf{?`Por qu\'e DE en lugar de AG?} \cite{price2005differential, deb2012optimization}
+    \vspace{0.2cm}
+
+    \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+        \textbf{Algoritmo Gen\'etico (AG):}
+        \begin{itemize}
+            \item Codificaci\'on binaria o real con operadores gen\'ericos
+            \item Mutaci\'on y cruce no adaptativos
+            \item Convergencia lenta en espacios continuos de alta dimensi\'on
+        \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+        \textbf{Evoluci\'on Diferencial (DE):}
+        \begin{itemize}
+            \item Opera directamente sobre vectores continuos (18 variables)
+            \item Mutaci\'on auto-adaptativa mediante vectores diferencia
+            \item Mejor exploraci\'on en espacios de alta dimensi\'on
+            \item Convergencia probada para optimizaci\'on de mecanismos
+        \end{itemize}
+    \end{column}
+    \end{columns}
+
+    \vspace{0.3cm}
+    \begin{center}
+    \textbf{Resultado:} DE logr\'o error sub-milim\'etrico donde AG se estanc\'o en 6\,mm.
+    \end{center}
+\end{frame}
+
+%-------------------------------------------------------%
+\begin{frame}{Optuna: Optimizaci\'on Bayesiana de Hiperpar\'ametros}
+    \scriptsize
+    \textbf{Estrategia de dos etapas} \cite{akiba2019optuna}:
+    \vspace{0.2cm}
+
+    \textbf{Etapa 1 --- Optuna (TPE Bayesiano):}
+    \begin{itemize}
+        \item Busca la mejor combinaci\'on de hiperpar\'ametros para DE:
+        \begin{itemize}
+            \scriptsize
+            \item Estrategia: \texttt{best1exp}, \texttt{rand1bin}, \texttt{best1bin}
+            \item Tama\~no de poblaci\'on: 15--30
+            \item Rango de mutaci\'on: $[0.5, 1.5]$
+            \item Recombinaci\'on: $[0.5, 0.9]$
+        \end{itemize}
+    \end{itemize}
+
+    \vspace{0.2cm}
+    \textbf{Etapa 2 --- DE con hiperpar\'ametros \'optimos:}
+    \begin{itemize}
+        \item Ejecuci\'on completa (1000 iteraciones) con los mejores par\'ametros
+        \item Polish con L-BFGS-B para refinamiento local
+    \end{itemize}
+
+    \vspace{0.2cm}
+    \begin{center}
+    \fbox{\parbox{0.85\textwidth}{\centering
+    Optuna elimina el ajuste manual de hiperpar\'ametros, reduciendo\\
+    significativamente el tiempo de desarrollo y mejorando la repetibilidad.
+    }}
+    \end{center}
+\end{frame}
+
+%-------------------------------------------------------%
+\begin{frame}{Distancia de Chamfer como M\'etrica de Forma}
+    \scriptsize
+    \textbf{?`Por qu\'e Chamfer en lugar de RMS punto a punto?} \cite{fan2017chamfer}
+    \vspace{0.2cm}
+
+    \textbf{Definici\'on:}
+    \begin{equation}
+        d_{CH}(S,T) = \frac{1}{|S|}\sum_{s \in S} \min_{t \in T} \|s - t\| \;+\; \frac{1}{|T|}\sum_{t \in T} \min_{s \in S} \|t - s\|
+    \end{equation}
+
+    \vspace{0.1cm}
+    \textbf{Ventajas sobre RMS:}
+    \begin{itemize}
+        \item \textbf{Bidireccional:} mide similitud de forma en ambas direcciones
+        \item \textbf{Robusta:} maneja diferentes densidades de puntos entre MOCAP y simulaci\'on
+        \item \textbf{Tolerante:} menos sensible a desalineamientos locales temporales
+    \end{itemize}
+
+    \vspace{0.2cm}
+    \textbf{Complementos en la funci\'on objetivo:}
+    \begin{itemize}
+        \item Alineaci\'on de Procrustes (rotaci\'on + traslaci\'on \'optima)
+        \item Penalizaci\'on de monotonicidad (evita ``ganchos'' en trayectorias)
+        \item Pesos: $W_{IFP}=0.25$, $W_{IFD}=0.375$, $W_{Tip}=0.375$
+    \end{itemize}
+\end{frame}
+
+%-------------------------------------------------------%
+\begin{frame}[fragile]{C\'odigo: Funci\'on Objetivo (\texttt{exo\_17.py})}
+\begin{lstlisting}[style=pythonstyle,basicstyle=\ttfamily\tiny]
+def fitness_function(p):
+    sim_data = run_kinematics(p, theta_input)
+    if sim_data is None:
+        return 1000.0
+    # Alineacion Procrustes (rotacion + traslacion)
+    all_mocap = np.vstack([mocap_pts[k] for k in ('ifp','ifd','tip')])
+    all_sim   = np.vstack([sim_data[k]  for k in ('ifp','ifd','tip')])
+    R, t = optimal_rigid_transform(all_mocap, all_sim)
+    aligned = {k: apply_transform(sim_data[k], R, t)
+               for k in ('ifp', 'ifd', 'tip')}
+    # Distancia de Chamfer por articulacion
+    err_ifp = chamfer_distance(mocap_pts['ifp'], aligned['ifp'])
+    err_ifd = chamfer_distance(mocap_pts['ifd'], aligned['ifd'])
+    err_tip = chamfer_distance(mocap_pts['tip'], aligned['tip'])
+    # Penalizacion de monotonicidad (anti-gancho)
+    mono_ifd = monotonicity_penalty(aligned['ifd'])
+    mono_tip = monotonicity_penalty(aligned['tip'])
+    shape_error = 0.25*err_ifp + 0.375*err_ifd + 0.375*err_tip
+    return shape_error + 5.0*(mono_ifd + mono_tip)
+\end{lstlisting}
+    \scriptsize
+    \vspace{0.1cm}
+    \textbf{18 variables de dise\~no:} longitudes de eslabones, offsets angulares, relaci\'on de engranaje.\\
+    \textbf{Bounds:} 0.01--0.12\,m (eslabones), par\'ametros angulares en $[0, \pi]$.
+\end{frame}
+
+%-------------------------------------------------------%
+\begin{frame}{Resultados: DE + Optuna}
+    \scriptsize
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.85\linewidth]{imagens/resultado_de_optuna.png}
+        \caption{Trayectorias MOCAP vs.\ EXO optimizado con DE + Optuna}
+        \label{fig:resultado_de_optuna}
+    \end{figure}
+
+    \vspace{-0.2cm}
+    \begin{columns}[T]
+    \begin{column}{0.45\textwidth}
+        \textbf{AG + Hiperheur\'istica:}
+        \begin{itemize}
+            \item Error: 6\,mm (RMS)
+            \item Eslabones no realistas
+            \item Convergencia inestable
+        \end{itemize}
+    \end{column}
+    \begin{column}{0.45\textwidth}
+        \textbf{DE + Optuna + Chamfer:}
+        \begin{itemize}
+            \item Error global: $<$1\,mm
+            \item Eslabones dentro de bounds
+            \item Trayectorias sin ``ganchos''
+        \end{itemize}
+    \end{column}
+    \end{columns}
+
+    \vspace{0.2cm}
+    \begin{center}
+    $\Rightarrow$ \textbf{Mejora de $>$6$\times$ en precisi\'on con restricciones f\'isicas satisfechas.}
+    \end{center}
 \end{frame}
 
 %================================================%

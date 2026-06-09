@@ -1,26 +1,26 @@
-\frametitle{Hiperheur\'istica como Gestor del AG}
-\scriptsize
-    \textbf{Idea:} Usar una hiperheur\'istica como seleccionador din\'amico entre operadores de cruce y mutaci\'on para optimizar el mecanismo completo (5 barras + 4 barras acoplados).
-
-    \vspace{0.2cm}
-    \textbf{Estructura del modelo:}
-    \begin{itemize}
-        \item Vector de dise\~no: 12 variables (bancadas, eslabones, falange, relaci\'on de engranes, offset angular).
-        \item Modelo cinem\'atico: lazo de 5 barras $\rightarrow$ lazo de 4 barras $\rightarrow$ posici\'on IFP.
-        \item Fitness: Error RMS + penalizaci\'on por compacidad.
-    \end{itemize}
-
-    \vspace{0.2cm}
-    \textbf{Fragmento -- Hiperheur\'istica de mutaci\'on:}
-\begin{lstlisting}[language=Python,basicstyle=\ttfamily\tiny]
-def hyper_heuristic_mutation(ind):
-    method = random.choice(['soft','aggressive'])
-    if method == 'soft':
-        idx = random.randint(0, len(ind)-1)
-        ind[idx] += random.uniform(-0.005, 0.005)
-    else:
-        for i in range(len(ind)):
-            if random.random() < 0.3:
-                ind[i] += random.uniform(-0.02, 0.02)
-    return ind
+\frametitle{C\'odigo: Funci\'on Objetivo (\texttt {exo\_17.py})}
+\begin{lstlisting}[style=pythonstyle,basicstyle=\ttfamily\tiny]
+def fitness_function(p):
+    sim_data = run_kinematics(p, theta_input)
+    if sim_data is None:
+        return 1000.0
+    # Alineacion Procrustes (rotacion + traslacion)
+    all_mocap = np.vstack([mocap_pts[k] for k in ('ifp','ifd','tip')])
+    all_sim   = np.vstack([sim_data[k]  for k in ('ifp','ifd','tip')])
+    R, t = optimal_rigid_transform(all_mocap, all_sim)
+    aligned = {k: apply_transform(sim_data[k], R, t)
+               for k in ('ifp', 'ifd', 'tip')}
+    # Distancia de Chamfer por articulacion
+    err_ifp = chamfer_distance(mocap_pts['ifp'], aligned['ifp'])
+    err_ifd = chamfer_distance(mocap_pts['ifd'], aligned['ifd'])
+    err_tip = chamfer_distance(mocap_pts['tip'], aligned['tip'])
+    # Penalizacion de monotonicidad (anti-gancho)
+    mono_ifd = monotonicity_penalty(aligned['ifd'])
+    mono_tip = monotonicity_penalty(aligned['tip'])
+    shape_error = 0.25*err_ifp + 0.375*err_ifd + 0.375*err_tip
+    return shape_error + 5.0*(mono_ifd + mono_tip)
 \end{lstlisting}
+    \scriptsize
+    \vspace{0.1cm}
+    \textbf{18 variables de dise\~no:} longitudes de eslabones, offsets angulares, relaci\'on de engranaje.\\
+    \textbf{Bounds:} 0.01--0.12\,m (eslabones), par\'ametros angulares en $[0, \pi]$.
