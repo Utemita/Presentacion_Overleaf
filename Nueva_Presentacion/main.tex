@@ -68,14 +68,19 @@
 \end{frame}
 
 %---------------- Indice automatico ----------------%
-\begin{frame}{Indice (1/2)}
-\small
-\tableofcontents[sections={1-5}]
+\begin{frame}{Indice (1/3)}
+\scriptsize
+\tableofcontents[sections={1-4}]
 \end{frame}
 
-\begin{frame}{Indice (2/2)}
-\small
-\tableofcontents[sections={6-9}]
+\begin{frame}{Indice (2/3)}
+\scriptsize
+\tableofcontents[sections={5-6}]
+\end{frame}
+
+\begin{frame}{Indice (3/3)}
+\scriptsize
+\tableofcontents[sections={7-9}]
 \end{frame}
 
 %================================================%
@@ -887,6 +892,8 @@ def hyper_heuristic_mutation(ind):
 \end{frame}
 
 %-------------------------------------------------------%
+\subsection{Evoluci\'on Diferencial + Optuna}
+
 % NUEVAS DIAPOSITIVAS: DE + Optuna
 %-------------------------------------------------------%
 \begin{frame}{Evoluci\'on Diferencial vs.\ Algoritmo Gen\'etico}
@@ -1016,7 +1023,7 @@ def fitness_function(p):
     \scriptsize
     \begin{figure}
         \centering
-        \includegraphics[width=0.75\linewidth]{imagens/resultado_de_optuna.png}
+        \includegraphics[width=0.70\linewidth]{imagens/resultado_de_optuna.png}
         \caption{Trayectorias MOCAP vs.\ EXO optimizado con DE + Optuna}
         \label{fig:resultado_de_optuna}
     \end{figure}
@@ -1024,6 +1031,7 @@ def fitness_function(p):
     \vspace{-0.3cm}
     \begin{columns}[T]
     \begin{column}{0.45\textwidth}
+        \tiny
         \textbf{AG + Hiperheur\'istica:}
         \begin{itemize}
             \item Error: 6\,mm (RMS)
@@ -1032,6 +1040,7 @@ def fitness_function(p):
         \end{itemize}
     \end{column}
     \begin{column}{0.45\textwidth}
+        \tiny
         \textbf{DE + Optuna + Chamfer:}
         \begin{itemize}
             \item Error global: $<$1\,mm
@@ -1041,7 +1050,6 @@ def fitness_function(p):
     \end{column}
     \end{columns}
 
-    \vspace{0.2cm}
     \begin{center}
     $\Rightarrow$ \textbf{Mejora de $>$6$\times$ en precisi\'on con restricciones f\'isicas satisfechas.}
     \end{center}
