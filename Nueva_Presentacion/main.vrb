@@ -1,38 +1,26 @@
-\frametitle{Modelo cinem\'atico del Mecanismo de 5 Barras}
+\frametitle{Hiperheur\'istica como Gestor del AG}
 \scriptsize
-\textbf{Modelo cinem\'atico}
+    \textbf{Idea:} Usar una hiperheur\'istica como seleccionador din\'amico entre operadores de cruce y mutaci\'on para optimizar el mecanismo completo (5 barras + 4 barras acoplados).
 
-\vspace{0.2cm}
+    \vspace{0.2cm}
+    \textbf{Estructura del modelo:}
+    \begin{itemize}
+        \item Vector de dise\~no: 12 variables (bancadas, eslabones, falange, relaci\'on de engranes, offset angular).
+        \item Modelo cinem\'atico: lazo de 5 barras $\rightarrow$ lazo de 4 barras $\rightarrow$ posici\'on IFP.
+        \item Fitness: Error RMS + penalizaci\'on por compacidad.
+    \end{itemize}
 
-Se calcul\'o la posici\'on del efector final mediante
-la intersecci\'on de dos circunferencias.
-
-\vspace{0.2cm}
-
+    \vspace{0.2cm}
+    \textbf{Fragmento -- Hiperheur\'istica de mutaci\'on:}
 \begin{lstlisting}[language=Python,basicstyle=\ttfamily\tiny]
-d = np.sqrt((Dx - Bx)**2 +
-            (Dy - By)**2)
-
-a = (l3**2 - l4**2 + d**2)/(2*d)
-
-h = np.sqrt(l3**2 - a**2)
-
-Px = Bx + a*(Dx - Bx)/d
-Py = By + a*(Dy - By)/d
-
-x = Px + h*(Dy - By)/d
-y = Py - h*(Dx - Bx)/d
+def hyper_heuristic_mutation(ind):
+    method = random.choice(['soft','aggressive'])
+    if method == 'soft':
+        idx = random.randint(0, len(ind)-1)
+        ind[idx] += random.uniform(-0.005, 0.005)
+    else:
+        for i in range(len(ind)):
+            if random.random() < 0.3:
+                ind[i] += random.uniform(-0.02, 0.02)
+    return ind
 \end{lstlisting}
-
-\vspace{0.2cm}
-
-\textbf{Restricciones geom\'etricas}
-
-\begin{lstlisting}[language=Python,basicstyle=\ttfamily\tiny]
-if d > (l3 + l4):
-    return None, None
-
-if d < abs(l3 - l4):
-    return None, None
-\end{lstlisting}
-

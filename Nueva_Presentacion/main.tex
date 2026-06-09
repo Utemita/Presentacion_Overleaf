@@ -277,16 +277,16 @@
 \begin{frame}{Algoritmos de Optimizaci\'on: M\'etodos Cl\'asicos}
 \begin{table}
     \centering
-    \scriptsize
-    \renewcommand{\arraystretch}{1.5}
-    \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{2.2cm}|X|X|X|}
+    \tiny
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{1.8cm}|X|X|X|}
         \hline
         \rowcolor[HTML]{C0C0C0}
         \textbf{T\'ecnica} & \textbf{Definici\'on} & \textbf{Ventajas} & \textbf{Desventajas} \\ \hline
 
-        \textbf{Gradiente Descendente (GD)} & Minimiza iterativamente usando derivadas. Converge en direcci\'on opuesta al gradiente. & Simple, eficiente en funciones convexas. & No aplicable a funciones no diferenciables \cite{granada2006}. Alta probabilidad de convergencia local \cite{rojas2018algoritmos}. \\ \hline
+        \textbf{Gradiente Descendente (GD)} & Minimiza iterativamente usando derivadas. Converge en direcci\'on opuesta al gradiente. & Simple, eficiente en funciones convexas. & No aplicable a funciones no diferenciables \cite{granada2006}. Alta probabilidad de convergencia local \cite{Rojas2018}. \\ \hline
 
-        \textbf{Newton-Raphson (NR)} & Usa derivadas de 1er y 2do orden para hallar ra\'ices o puntos estacionarios. & Aplicable a optimizaci\'on no suave \cite{loayza2024optimizacion}. R\'apida convergencia cuadr\'atica. & C\'alculo del Hessiano costoso. Solo para funciones continuas \cite{nocedal2006numerical}. \\ \hline
+        \textbf{Newton-Raphson (NR)} & Usa derivadas de 1er y 2do orden para hallar ra\'ices o puntos estacionarios. & Aplicable a optimizaci\'on no suave \cite{Loayza2024}. R\'apida convergencia cuadr\'atica. & C\'alculo del Hessiano costoso. Solo para funciones continuas \cite{Nocedal2006}. \\ \hline
 
         \textbf{Monte Carlo por Capas (MLMC)} & Simulaci\'on a lazo cerrado con valores aleatorios para minimizar el error total \cite{fernandez2019optimizacion}. & Alta precisi\'on con menor costo que el Monte Carlo cl\'asico. & Implementaci\'on compleja. Requiere modelo bien definido \cite{zhang2024computer}. \\ \hline
     \end{tabularx}
@@ -310,7 +310,7 @@
 
         \textbf{Enjambre de Part\'iculas (PSO)} & Imita el comportamiento colectivo de un enjambre. & Eficiente en problemas de alta complejidad \cite{lopez2014evaluacion}. F\'acil implementaci\'on. & Riesgo de estancarse en \'optimos locales \cite{zhang2015}. \\ \hline
 
-        \textbf{Recocido Simulado (SA)} & Basado en el enfriamiento lento de metales para obtener estructuras resistentes \cite{abarca2015}. & Capacidad de escapar de \'optimos locales. & Lento, depende del esquema de enfriamiento \cite{centeno2016recocido}. \\ \hline
+        \textbf{Recocido Simulado (SA)} & Basado en el enfriamiento lento de metales para obtener estructuras resistentes \cite{abarca2015aplicaciones}. & Capacidad de escapar de \'optimos locales. & Lento, depende del esquema de enfriamiento \cite{centeno2016recocido}. \\ \hline
 
         \textbf{Colonia de Hormigas (ACO)} & Imita la b\'usqueda de rutas \'optimas mediante feromonas. & Efectivo en problemas de rutas y s\'intesis de mecanismos. & Alto costo computacional \cite{carlos2024}. \\ \hline
 
@@ -390,61 +390,6 @@
     Algoritmos Gen\'eticos (GA) sobresale por su capacidad para optimizar sistemas complejos sin depender de derivadas \cite{deb2012optimization}. El algoritmo garantiza una exploraci\'on global que permite escapar de m\'inimos locales \cite{goldberg1989genetic}, asegurando el cumplimiento de las restricciones bio-mec\'anicas del usuario mediante un manejo de restricciones cinem\'aticas \cite{coello2002theoretical}.
 \end{frame}
 
-%-------------------------------------------------------%
-\subsection{Hiperheur\'istica + AG: Primer Intento}
-
-\begin{frame}[fragile]{Hiperheur\'istica como Gestor del AG}
-    \scriptsize
-    \textbf{Idea:} Usar una hiperheur\'istica como seleccionador din\'amico entre operadores de cruce y mutaci\'on para optimizar el mecanismo completo (5 barras + 4 barras acoplados).
-
-    \vspace{0.2cm}
-    \textbf{Estructura del modelo:}
-    \begin{itemize}
-        \item Vector de dise\~no: 12 variables (bancadas, eslabones, falange, relaci\'on de engranes, offset angular).
-        \item Modelo cinem\'atico: lazo de 5 barras $\rightarrow$ lazo de 4 barras $\rightarrow$ posici\'on IFP.
-        \item Fitness: Error RMS + penalizaci\'on por compacidad.
-    \end{itemize}
-
-    \vspace{0.2cm}
-    \textbf{Fragmento -- Hiperheur\'istica de mutaci\'on:}
-\begin{lstlisting}[language=Python,basicstyle=\ttfamily\tiny]
-def hyper_heuristic_mutation(ind):
-    method = random.choice(['soft','aggressive'])
-    if method == 'soft':
-        idx = random.randint(0, len(ind)-1)
-        ind[idx] += random.uniform(-0.005, 0.005)
-    else:
-        for i in range(len(ind)):
-            if random.random() < 0.3:
-                ind[i] += random.uniform(-0.02, 0.02)
-    return ind
-\end{lstlisting}
-\end{frame}
-
-%-------------------------------------------------------%
-\begin{frame}{Resultados: Hiperheur\'istica + AG}
-    \scriptsize
-    \textbf{Par\'ametros:} Poblaci\'on: 60, Generaciones: 120, Mutaci\'on: 25\%, Cruce: 80\%.
-
-    \textbf{Error RMS final: 0.006 m} (no satisfactorio).
-
-    \begin{figure}
-        \centering
-        \includegraphics[width=0.85\linewidth]{imagens/resultado_hiper_AG.png}
-        \caption{Resultado del AG con hiperheur\'istica para la articulaci\'on IFP}
-        \label{fig:hiper_ag}
-    \end{figure}
-
-    \vspace{-0.2cm}
-    \textbf{Problemas identificados:}
-    \begin{enumerate}
-        \item \textbf{Alta sensibilidad:} Las ecuaciones de cierre frecuentemente no tienen soluci\'on (penalizaci\'on $10^6$).
-        \item \textbf{Hiperheur\'istica limitada:} Dificultad para mantener simult\'aneamente la trayectoria natural y las restricciones mec\'anicas.
-        \item \textbf{Costo computacional:} Incremento excesivo al intentar reducir el error.
-    \end{enumerate}
-
-    $\Rightarrow$ Se recurri\'o a \textbf{Evoluci\'on Diferencial (DE)} como alternativa.
-\end{frame}
 
 %================================================%
 % SECCION 6: Optimizacion
@@ -457,7 +402,7 @@ def hyper_heuristic_mutation(ind):
         \begin{column}{0.5\textwidth}
             \textbf{Configuraci\'on del Mecanismo:}
             \begin{itemize}
-                \item Eslabones: $l_1$ (fijo), $l_2$ (manivela), $l_3$ (acoplador), $l_4$ (balanc\'in).
+                \item Eslabones: $l_1$ (fijo), $l_2$ (manivela), $l_3$ (acoplador), $l_4$ (balanc\'in) \cite{Norton2012}.
                 \item \textbf{Condici\'on de Grashof:} Para rotaci\'on continua:
                 \[ s + l \leq p + q \]
                 donde $s$ es el menor y $l$ el mayor.
@@ -756,7 +701,9 @@ Resultado de la optimizaci\'on (Figura \ref{fig:tray_4b}).
 
 %---------------------------------------------%
 \begin{frame}{Validaci\'on del Mecanismo de 4 Barras}
+\scriptsize
 Se valida la optimizaci\'on mediante un simplificado modelo CAD.
+     \vspace{-0.2cm}
      \begin{columns}[T]
         \begin{column}{0.5\textwidth}
             \begin{table}
@@ -778,7 +725,7 @@ Se valida la optimizaci\'on mediante un simplificado modelo CAD.
         \begin{column}{0.5\textwidth}
             \begin{figure}
                 \centering
-                \includegraphics[width=1.0\linewidth]{imagens/estudio_mov.png}
+                \includegraphics[width=0.85\linewidth]{imagens/estudio_mov.png}
                 \caption{Mecanismo de 4 barras}
                 \label{fig:mec_4b}
             \end{figure}
@@ -794,7 +741,7 @@ Se valida la optimizaci\'on mediante un simplificado modelo CAD.
         \begin{column}{0.5\textwidth}
             \textbf{Configuraci\'on del Sistema:}
             \begin{itemize}
-                \item \textbf{Eslabones:} $l_1, l_2$ (brazos actuados), $l_3, l_4$ (acopladores) y $l_5$ (base fija).
+                \item \textbf{Eslabones:} $l_1, l_2$ (brazos actuados), $l_3, l_4$ (acopladores) y $l_5$ (base fija) \cite{Liu2006}.
                 \item \textbf{Efector Final (P):} Punto de intersecci\'on entre $l_3$ y $l_4$.
                 \item \textbf{Ventaja:} Mayor espacio de trabajo y versatilidad que el de 4 barras.
             \end{itemize}
@@ -865,7 +812,7 @@ if d < abs(l3 - l4):
 \begin{frame}{Resultados del Mecanismo de 5 Barras}
 
     \begin{itemize}
-        \item Los mecanismos de 5 barras tienen mayor libertad geom\'etrica para trazar trayectorias.
+        \item Los mecanismos de 5 barras tienen mayor libertad geom\'etrica para trazar trayectorias \cite{ebrahimi2015efficient}.
         \item Longitudes \'optimas obtenidas: 5.48, 1.0, 1.01, 5.14, 1.0 cm.
         \item Restricciones de dise\~no: $0.01 \le l_i \le 0.07\;m$
     \end{itemize}
@@ -886,6 +833,62 @@ if d < abs(l3 - l4):
         \caption{\centering Trayectoria y Evoluci\'on del Error - Mecanismo de 5 Barras}
         \label{fig:error_5b}
     \end{figure}
+\end{frame}
+
+%-------------------------------------------------------%
+\subsection{Hiperheur\'istica + AG: Primer Intento}
+
+\begin{frame}[fragile]{Hiperheur\'istica como Gestor del AG}
+    \scriptsize
+    \textbf{Idea:} Usar una hiperheur\'istica como seleccionador din\'amico entre operadores de cruce y mutaci\'on para optimizar el mecanismo completo (5 barras + 4 barras acoplados).
+
+    \vspace{0.2cm}
+    \textbf{Estructura del modelo:}
+    \begin{itemize}
+        \item Vector de dise\~no: 12 variables (bancadas, eslabones, falange, relaci\'on de engranes, offset angular).
+        \item Modelo cinem\'atico: lazo de 5 barras $\rightarrow$ lazo de 4 barras $\rightarrow$ posici\'on IFP.
+        \item Fitness: Error RMS + penalizaci\'on por compacidad.
+    \end{itemize}
+
+    \vspace{0.2cm}
+    \textbf{Fragmento -- Hiperheur\'istica de mutaci\'on:}
+\begin{lstlisting}[language=Python,basicstyle=\ttfamily\tiny]
+def hyper_heuristic_mutation(ind):
+    method = random.choice(['soft','aggressive'])
+    if method == 'soft':
+        idx = random.randint(0, len(ind)-1)
+        ind[idx] += random.uniform(-0.005, 0.005)
+    else:
+        for i in range(len(ind)):
+            if random.random() < 0.3:
+                ind[i] += random.uniform(-0.02, 0.02)
+    return ind
+\end{lstlisting}
+\end{frame}
+
+%-------------------------------------------------------%
+\begin{frame}{Resultados: Hiperheur\'istica + AG}
+    \scriptsize
+    \textbf{Par\'ametros:} Poblaci\'on: 60, Generaciones: 120, Mutaci\'on: 25\%, Cruce: 80\%.
+
+    \textbf{Error RMS final: 0.006 m} (no satisfactorio).
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.85\linewidth]{imagens/resultado_hiper_AG.png}
+        \caption{Resultado del AG con hiperheur\'istica para la articulaci\'on IFP}
+        \label{fig:hiper_ag}
+    \end{figure}
+
+    \vspace{-0.2cm}
+    \textbf{Problemas identificados:}
+    \begin{enumerate}
+        \item \textbf{Alta sensibilidad:} Las ecuaciones de cierre frecuentemente no tienen soluci\'on (penalizaci\'on $10^6$).
+        \item \textbf{Hiperheur\'istica limitada:} Dificultad para mantener simult\'aneamente la trayectoria natural y las restricciones mec\'anicas.
+        \item \textbf{Costo computacional:} Incremento excesivo al intentar reducir el error.
+    \end{enumerate}
+
+    $\Rightarrow$ Se recurri\'o a \textbf{Evoluci\'on Diferencial (DE)} como alternativa.
 \end{frame}
 
 %================================================%

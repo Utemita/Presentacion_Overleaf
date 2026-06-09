@@ -49,10 +49,28 @@ J.~Cabrera, A.~Simon, and M.~Prado, ````{O}ptimal synthesis of mechanisms with
   genetic algorithms'','' {\em Mechanism and Machine Theory}, vol.~37, no.~1,
   pp.~1165--1177, 2002.
 
+\bibitem{deb2012optimization}
+K.~Deb, {\em Optimization for Engineering Design: Algorithms and Examples}.
+\newblock PHI Learning Pvt. Ltd., 2~ed., 2012.
+
 \bibitem{granada2006}
 E.~Granada, E.~Toro, and Z.~E. Antonio, ````{O}ptimización matemática en
   superficies de desempeño de redes neuronales artificiales'','' {\em Scientia
   Et Technica}, vol.~XII, pp.~121--126, Dec. 2006.
+
+\bibitem{Rojas2018}
+J.~R. Delgado, ``Algoritmos meta-heurísticos de optimización aplicados al
+  entrenamiento de redes neuronales profundas,'' Master's thesis, Universidad
+  de las Ciencias Informáticas, 2018.
+
+\bibitem{Loayza2024}
+L.~L. Romero, ``Optimización no suave a través de métodos de tipo newton:
+  Optimización no suave a través de métodos bfgs y l-bfgs,'' Master's
+  thesis, Escuela Politécnica Nacional, 2024.
+
+\bibitem{Nocedal2006}
+J.~Nocedal and J.~S. Wright, {\em Numerical Optimization}.
+\newblock New York: Springer, 2~ed., 2006.
 
 \bibitem{fernandez2019optimizacion}
 C.~Fernández, N.~Pantano, S.~Godoy, E.~Serrano, and G.~Scaglia,
@@ -85,6 +103,11 @@ Y.~Zhang, S.~Wang, and G.~Ji, ````{A} comprehensive survey on particle swarm
   optimization algorithm and its applications'','' {\em Mathematical Problems
   in Engineering}, vol.~2015, no.~1, pp.~1--38, 2015.
 
+\bibitem{abarca2015aplicaciones}
+J.~del Carmen~Peralta, J.~C. Juárez, and B.~B. Martínez, ``Aplicaciones de
+  recocido simulado en problemas de optimización combinatoria,'' {\em
+  Inventio}, vol.~11, no.~23, pp.~23--28, 2015.
+
 \bibitem{centeno2016recocido}
 M.~C. Romero and R.~Velásquez, ````{U}n algoritmo metaheurístico de recocido
   simulado para el 3ap-axial'','' {\em SABER. Revista Multidisciplinaria del
@@ -99,5 +122,26 @@ C.~A.~C. Coello, ````{I}ntroducción a la optimización multiobjetivo'','' {\em
 F.~A. Zotes and M.~S. Peñas, ````{U}na revisión de técnicas de optimización
   heurística para el diseño de trayectorias interplanetarias en misiones
   espaciales'','' {\em CEA}, vol.~14, no.~1, pp.~1--15, 2017.
+
+\bibitem{goldberg1989genetic}
+D.~E. Goldberg, {\em Genetic Algorithms in Search, Optimization, and Machine
+  Learning}.
+\newblock Addison-Wesley, 1989.
+
+\bibitem{coello2002theoretical}
+C.~A.~C. Coello, ``Theoretical and numerical constraint-handling techniques
+  used with evolutionary algorithms: a survey of the state of the art,'' {\em
+  Computer Methods in Applied Mechanics and Engineering}, vol.~191, no.~11-12,
+  pp.~1245--1287, 2002.
+
+\bibitem{Norton2012}
+R.~L. Norton, {\em Design of Machinery: An Introduction to the Synthesis and
+  Analysis of Mechanisms and Machines}.
+\newblock McGraw-Hill, 5~ed., 2012.
+
+\bibitem{Liu2006}
+X.~J. Liu, J.~Wang, and G.~Pritschow, ``Kinematics, singularity and workspace
+  of planar 5r symmetrical parallel mechanisms,'' {\em Mechanism and Machine
+  Theory}, vol.~41, no.~2, pp.~145--169, 2006.
 
 \end{thebibliography}
