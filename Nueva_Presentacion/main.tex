@@ -205,22 +205,53 @@
 %================================================%
 \section{Base de Datos}
 
-\begin{frame}{Base de Datos: Descripci\'on y An\'alisis}
-    \textbf{Descripci\'on:}
+\begin{frame}{Base de Datos}
+    \small
+    \textbf{Dataset de Pizzolato et al. (2017)}
     \begin{itemize}
-        \item Se recopilaron datos de trayectorias anat\'omicas del movimiento de los dedos durante el agarre de pinza fina.
-        \item Los datos se obtuvieron mediante estudios de captura de movimiento y an\'alisis cinem\'atico.
-        \item Se discretiz\'o el movimiento de la falange distal en $N=50$ puntos.
+        \item Base de datos calibrada de movimientos y agarres de la mano.
+        \item \textbf{40 sujetos} realizando diferentes tipos de agarres.
+        \item Datos de cinem\'atica articular y electromiograf\'ia (EMG).
+        \item Captura mediante sensores de movimiento (CyberGlove + marcadores \'opticos).
     \end{itemize}
 
     \vspace{0.3cm}
-    \textbf{An\'alisis:}
+    \begin{block}{Aplicaci\'on en este proyecto}
+        Se extraen las trayectorias articulares del dedo \'indice durante un agarre de pinza fina (125$^\circ$) para usarlas como \textbf{referencia en la optimizaci\'on} del mecanismo.
+    \end{block}
+\end{frame}
+
+\begin{frame}{Selecci\'on del Agarre de Referencia}
+    \small
+    \textbf{Agarre seleccionado:} Pinza fina (125$^\circ$ de flexi\'on total)
+
+    \vspace{0.2cm}
+    \textbf{Articulaciones del dedo \'indice analizadas:}
     \begin{itemize}
-        \item La trayectoria objetivo se define como:
-        \[ x_{ref} = 0.05 \cos(\theta), \quad y_{ref} = 0.08 \sin(\theta) \]
-        \item Intervalo de operaci\'on: $\theta \in [0, \pi/2]$.
-        \item Estos datos sirven como referencia para la funci\'on de aptitud del algoritmo de optimizaci\'on.
+        \item \textbf{IFP} (Interfal\'angica Proximal / PIP): uni\'on entre falange proximal y media.
+        \item \textbf{IFD} (Interfal\'angica Distal / DIP): uni\'on entre falange media y distal.
+        \item \textbf{TIP} (Punta del dedo): extremo de la falange distal.
     \end{itemize}
+
+    \vspace{0.2cm}
+    \textbf{Medidas antropom\'etricas utilizadas:}
+    \begin{itemize}
+        \item Falange proximal: 49 mm
+        \item Falange media: 26 mm
+        \item Falange distal: 24 mm
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Trayectorias Articulares de Referencia}
+    \small
+    Trayectorias (x, y) de las tres articulaciones del dedo \'indice durante el agarre de pinza fina, extra\'idas de la base de datos (v\'ease Figura \ref{fig:tray_art}).
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.95\linewidth]{imagens/trayectorias_articulares.png}
+        \caption{Trayectorias articulares IFP, IFD y TIP del dedo \'indice}
+        \label{fig:tray_art}
+    \end{figure}
 \end{frame}
 
 %================================================%

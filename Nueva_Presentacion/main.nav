@@ -38,115 +38,119 @@
 \headcommand {\beamer@framepages {13}{13}}
 \headcommand {\slideentry {4}{0}{2}{14/14}{}{0}}
 \headcommand {\beamer@framepages {14}{14}}
-\headcommand {\beamer@sectionpages {13}{14}}
-\headcommand {\beamer@subsectionpages {13}{14}}
-\headcommand {\sectionentry {5}{Algoritmos de Optimizaci\'on}{15}{Algoritmos de Optimizaci\'on}{0}}
-\headcommand {\slideentry {5}{0}{1}{15/15}{}{0}}
+\headcommand {\slideentry {4}{0}{3}{15/15}{}{0}}
 \headcommand {\beamer@framepages {15}{15}}
-\headcommand {\slideentry {5}{0}{2}{16/16}{}{0}}
+\headcommand {\slideentry {4}{0}{4}{16/16}{}{0}}
 \headcommand {\beamer@framepages {16}{16}}
-\headcommand {\slideentry {5}{0}{3}{17/17}{}{0}}
+\headcommand {\beamer@sectionpages {13}{16}}
+\headcommand {\beamer@subsectionpages {13}{16}}
+\headcommand {\sectionentry {5}{Algoritmos de Optimizaci\'on}{17}{Algoritmos de Optimizaci\'on}{0}}
+\headcommand {\slideentry {5}{0}{1}{17/17}{}{0}}
 \headcommand {\beamer@framepages {17}{17}}
-\headcommand {\slideentry {5}{0}{4}{18/18}{}{0}}
+\headcommand {\slideentry {5}{0}{2}{18/18}{}{0}}
 \headcommand {\beamer@framepages {18}{18}}
-\headcommand {\beamer@subsectionpages {15}{18}}
-\headcommand {\beamer@subsectionentry {0}{5}{1}{19}{Evaluaci\'on de las T\'ecnicas de Optimizaci\'on}}
-\headcommand {\slideentry {5}{1}{1}{19/19}{Evaluaci\'on de las T\'ecnicas de Optimizaci\'on}{0}}
+\headcommand {\slideentry {5}{0}{3}{19/19}{}{0}}
 \headcommand {\beamer@framepages {19}{19}}
-\headcommand {\slideentry {5}{1}{2}{20/20}{Evaluaci\'on de las T\'ecnicas de Optimizaci\'on}{0}}
+\headcommand {\slideentry {5}{0}{4}{20/20}{}{0}}
 \headcommand {\beamer@framepages {20}{20}}
-\headcommand {\slideentry {5}{1}{3}{21/21}{Evaluaci\'on de las T\'ecnicas de Optimizaci\'on}{0}}
+\headcommand {\beamer@subsectionpages {17}{20}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{21}{Evaluaci\'on de las T\'ecnicas de Optimizaci\'on}}
+\headcommand {\slideentry {5}{1}{1}{21/21}{Evaluaci\'on de las T\'ecnicas de Optimizaci\'on}{0}}
 \headcommand {\beamer@framepages {21}{21}}
-\headcommand {\beamer@sectionpages {15}{21}}
-\headcommand {\beamer@subsectionpages {19}{21}}
-\headcommand {\sectionentry {6}{Optimizaci\'on}{22}{Optimizaci\'on}{0}}
-\headcommand {\slideentry {6}{0}{1}{22/22}{}{0}}
+\headcommand {\slideentry {5}{1}{2}{22/22}{Evaluaci\'on de las T\'ecnicas de Optimizaci\'on}{0}}
 \headcommand {\beamer@framepages {22}{22}}
-\headcommand {\beamer@subsectionpages {22}{22}}
-\headcommand {\beamer@subsectionentry {0}{6}{1}{23}{Modelo Cinem\'atico de Mecanismo de 4 Barras}}
-\headcommand {\slideentry {6}{1}{1}{23/23}{Modelo Cinem\'atico de Mecanismo de 4 Barras}{0}}
+\headcommand {\slideentry {5}{1}{3}{23/23}{Evaluaci\'on de las T\'ecnicas de Optimizaci\'on}{0}}
 \headcommand {\beamer@framepages {23}{23}}
-\headcommand {\beamer@subsectionpages {23}{23}}
-\headcommand {\beamer@subsectionentry {0}{6}{2}{24}{Algoritmo Gen\'etico: Par\'ametros y Funci\'on Fitness}}
-\headcommand {\slideentry {6}{2}{1}{24/24}{Algoritmo Gen\'etico: Par\'ametros y Funci\'on Fitness}{0}}
+\headcommand {\beamer@sectionpages {17}{23}}
+\headcommand {\beamer@subsectionpages {21}{23}}
+\headcommand {\sectionentry {6}{Optimizaci\'on}{24}{Optimizaci\'on}{0}}
+\headcommand {\slideentry {6}{0}{1}{24/24}{}{0}}
 \headcommand {\beamer@framepages {24}{24}}
 \headcommand {\beamer@subsectionpages {24}{24}}
-\headcommand {\beamer@subsectionentry {0}{6}{3}{25}{C\'odigo Python: Algoritmo Gen\'etico y Cinem\'atica}}
-\headcommand {\slideentry {6}{3}{1}{25/25}{C\'odigo Python: Algoritmo Gen\'etico y Cinem\'atica}{0}}
+\headcommand {\beamer@subsectionentry {0}{6}{1}{25}{Modelo Cinem\'atico de Mecanismo de 4 Barras}}
+\headcommand {\slideentry {6}{1}{1}{25/25}{Modelo Cinem\'atico de Mecanismo de 4 Barras}{0}}
 \headcommand {\beamer@framepages {25}{25}}
-\headcommand {\slideentry {6}{3}{2}{26/26}{C\'odigo Python: Algoritmo Gen\'etico y Cinem\'atica}{0}}
+\headcommand {\beamer@subsectionpages {25}{25}}
+\headcommand {\beamer@subsectionentry {0}{6}{2}{26}{Algoritmo Gen\'etico: Par\'ametros y Funci\'on Fitness}}
+\headcommand {\slideentry {6}{2}{1}{26/26}{Algoritmo Gen\'etico: Par\'ametros y Funci\'on Fitness}{0}}
 \headcommand {\beamer@framepages {26}{26}}
-\headcommand {\beamer@subsectionpages {25}{26}}
-\headcommand {\beamer@subsectionentry {0}{6}{4}{27}{C\'odigo Python: M\'etodo de Procrustes}}
-\headcommand {\slideentry {6}{4}{1}{27/27}{C\'odigo Python: M\'etodo de Procrustes}{0}}
+\headcommand {\beamer@subsectionpages {26}{26}}
+\headcommand {\beamer@subsectionentry {0}{6}{3}{27}{C\'odigo Python: Algoritmo Gen\'etico y Cinem\'atica}}
+\headcommand {\slideentry {6}{3}{1}{27/27}{C\'odigo Python: Algoritmo Gen\'etico y Cinem\'atica}{0}}
 \headcommand {\beamer@framepages {27}{27}}
-\headcommand {\slideentry {6}{4}{2}{28/28}{C\'odigo Python: M\'etodo de Procrustes}{0}}
+\headcommand {\slideentry {6}{3}{2}{28/28}{C\'odigo Python: Algoritmo Gen\'etico y Cinem\'atica}{0}}
 \headcommand {\beamer@framepages {28}{28}}
 \headcommand {\beamer@subsectionpages {27}{28}}
-\headcommand {\beamer@subsectionentry {0}{6}{5}{29}{Resultados: Trayectorias y Error (4 Barras)}}
-\headcommand {\slideentry {6}{5}{1}{29/29}{Resultados: Trayectorias y Error (4 Barras)}{0}}
+\headcommand {\beamer@subsectionentry {0}{6}{4}{29}{C\'odigo Python: M\'etodo de Procrustes}}
+\headcommand {\slideentry {6}{4}{1}{29/29}{C\'odigo Python: M\'etodo de Procrustes}{0}}
 \headcommand {\beamer@framepages {29}{29}}
-\headcommand {\slideentry {6}{5}{2}{30/30}{Resultados: Trayectorias y Error (4 Barras)}{0}}
+\headcommand {\slideentry {6}{4}{2}{30/30}{C\'odigo Python: M\'etodo de Procrustes}{0}}
 \headcommand {\beamer@framepages {30}{30}}
-\headcommand {\slideentry {6}{5}{3}{31/31}{Resultados: Trayectorias y Error (4 Barras)}{0}}
+\headcommand {\beamer@subsectionpages {29}{30}}
+\headcommand {\beamer@subsectionentry {0}{6}{5}{31}{Resultados: Trayectorias y Error (4 Barras)}}
+\headcommand {\slideentry {6}{5}{1}{31/31}{Resultados: Trayectorias y Error (4 Barras)}{0}}
 \headcommand {\beamer@framepages {31}{31}}
-\headcommand {\beamer@subsectionpages {29}{31}}
-\headcommand {\beamer@subsectionentry {0}{6}{6}{32}{Mecanismo de 5 Barras: Topolog\'ia y Cinem\'atica}}
-\headcommand {\slideentry {6}{6}{1}{32/32}{Mecanismo de 5 Barras: Topolog\'ia y Cinem\'atica}{0}}
+\headcommand {\slideentry {6}{5}{2}{32/32}{Resultados: Trayectorias y Error (4 Barras)}{0}}
 \headcommand {\beamer@framepages {32}{32}}
-\headcommand {\slideentry {6}{6}{2}{33/33}{Mecanismo de 5 Barras: Topolog\'ia y Cinem\'atica}{0}}
+\headcommand {\slideentry {6}{5}{3}{33/33}{Resultados: Trayectorias y Error (4 Barras)}{0}}
 \headcommand {\beamer@framepages {33}{33}}
-\headcommand {\beamer@subsectionpages {32}{33}}
-\headcommand {\beamer@subsectionentry {0}{6}{7}{34}{Resultados: Mecanismo de 5 Barras}}
-\headcommand {\slideentry {6}{7}{1}{34/34}{Resultados: Mecanismo de 5 Barras}{0}}
+\headcommand {\beamer@subsectionpages {31}{33}}
+\headcommand {\beamer@subsectionentry {0}{6}{6}{34}{Mecanismo de 5 Barras: Topolog\'ia y Cinem\'atica}}
+\headcommand {\slideentry {6}{6}{1}{34/34}{Mecanismo de 5 Barras: Topolog\'ia y Cinem\'atica}{0}}
 \headcommand {\beamer@framepages {34}{34}}
-\headcommand {\beamer@sectionpages {22}{34}}
-\headcommand {\beamer@subsectionpages {34}{34}}
-\headcommand {\sectionentry {7}{Conclusiones}{35}{Conclusiones}{0}}
-\headcommand {\slideentry {7}{0}{1}{35/35}{}{0}}
+\headcommand {\slideentry {6}{6}{2}{35/35}{Mecanismo de 5 Barras: Topolog\'ia y Cinem\'atica}{0}}
 \headcommand {\beamer@framepages {35}{35}}
-\headcommand {\slideentry {7}{0}{2}{36/36}{}{0}}
+\headcommand {\beamer@subsectionpages {34}{35}}
+\headcommand {\beamer@subsectionentry {0}{6}{7}{36}{Resultados: Mecanismo de 5 Barras}}
+\headcommand {\slideentry {6}{7}{1}{36/36}{Resultados: Mecanismo de 5 Barras}{0}}
 \headcommand {\beamer@framepages {36}{36}}
-\headcommand {\beamer@sectionpages {35}{36}}
-\headcommand {\beamer@subsectionpages {35}{36}}
-\headcommand {\sectionentry {8}{Lo que falta}{37}{Lo que falta}{0}}
-\headcommand {\slideentry {8}{0}{1}{37/37}{}{0}}
+\headcommand {\beamer@sectionpages {24}{36}}
+\headcommand {\beamer@subsectionpages {36}{36}}
+\headcommand {\sectionentry {7}{Conclusiones}{37}{Conclusiones}{0}}
+\headcommand {\slideentry {7}{0}{1}{37/37}{}{0}}
 \headcommand {\beamer@framepages {37}{37}}
-\headcommand {\slideentry {8}{0}{2}{38/38}{}{0}}
+\headcommand {\slideentry {7}{0}{2}{38/38}{}{0}}
 \headcommand {\beamer@framepages {38}{38}}
 \headcommand {\beamer@sectionpages {37}{38}}
 \headcommand {\beamer@subsectionpages {37}{38}}
-\headcommand {\sectionentry {9}{Cronograma de Actividades}{39}{Cronograma de Actividades}{0}}
-\headcommand {\slideentry {9}{0}{1}{39/39}{}{0}}
+\headcommand {\sectionentry {8}{Lo que falta}{39}{Lo que falta}{0}}
+\headcommand {\slideentry {8}{0}{1}{39/39}{}{0}}
 \headcommand {\beamer@framepages {39}{39}}
-\headcommand {\slideentry {9}{0}{2}{40/40}{}{0}}
+\headcommand {\slideentry {8}{0}{2}{40/40}{}{0}}
 \headcommand {\beamer@framepages {40}{40}}
-\headcommand {\slideentry {9}{0}{3}{41/41}{}{0}}
+\headcommand {\beamer@sectionpages {39}{40}}
+\headcommand {\beamer@subsectionpages {39}{40}}
+\headcommand {\sectionentry {9}{Cronograma de Actividades}{41}{Cronograma de Actividades}{0}}
+\headcommand {\slideentry {9}{0}{1}{41/41}{}{0}}
 \headcommand {\beamer@framepages {41}{41}}
-\headcommand {\beamer@sectionpages {39}{41}}
-\headcommand {\beamer@subsectionpages {39}{41}}
-\headcommand {\sectionentry {10}{Referencias}{42}{Referencias}{0}}
-\headcommand {\slideentry {10}{0}{1}{42/42}{}{0}}
+\headcommand {\slideentry {9}{0}{2}{42/42}{}{0}}
 \headcommand {\beamer@framepages {42}{42}}
-\headcommand {\beamer@sectionpages {42}{42}}
-\headcommand {\beamer@subsectionpages {42}{42}}
-\headcommand {\sectionentry {11}{Referencias}{43}{Referencias}{0}}
-\headcommand {\slideentry {11}{0}{0}{43/43}{}{0}}
+\headcommand {\slideentry {9}{0}{3}{43/43}{}{0}}
 \headcommand {\beamer@framepages {43}{43}}
-\headcommand {\slideentry {11}{0}{0}{43/44}{}{0}}
-\headcommand {\beamer@framepages {43}{44}}
-\headcommand {\slideentry {11}{0}{0}{43/45}{}{0}}
-\headcommand {\beamer@framepages {43}{45}}
-\headcommand {\slideentry {11}{0}{0}{43/46}{}{0}}
-\headcommand {\beamer@framepages {43}{46}}
-\headcommand {\slideentry {11}{0}{0}{43/47}{}{0}}
-\headcommand {\beamer@framepages {43}{47}}
-\headcommand {\slideentry {11}{0}{0}{43/48}{}{0}}
-\headcommand {\beamer@framepages {43}{48}}
-\headcommand {\slideentry {11}{0}{1}{49/49}{}{0}}
-\headcommand {\beamer@framepages {49}{49}}
-\headcommand {\beamer@partpages {1}{49}}
-\headcommand {\beamer@subsectionpages {42}{49}}
-\headcommand {\beamer@sectionpages {42}{49}}
-\headcommand {\beamer@documentpages {49}}
-\headcommand {\gdef \inserttotalframenumber {49}}
+\headcommand {\beamer@sectionpages {41}{43}}
+\headcommand {\beamer@subsectionpages {41}{43}}
+\headcommand {\sectionentry {10}{Referencias}{44}{Referencias}{0}}
+\headcommand {\slideentry {10}{0}{1}{44/44}{}{0}}
+\headcommand {\beamer@framepages {44}{44}}
+\headcommand {\beamer@sectionpages {44}{44}}
+\headcommand {\beamer@subsectionpages {44}{44}}
+\headcommand {\sectionentry {11}{Referencias}{45}{Referencias}{0}}
+\headcommand {\slideentry {11}{0}{0}{45/45}{}{0}}
+\headcommand {\beamer@framepages {45}{45}}
+\headcommand {\slideentry {11}{0}{0}{45/46}{}{0}}
+\headcommand {\beamer@framepages {45}{46}}
+\headcommand {\slideentry {11}{0}{0}{45/47}{}{0}}
+\headcommand {\beamer@framepages {45}{47}}
+\headcommand {\slideentry {11}{0}{0}{45/48}{}{0}}
+\headcommand {\beamer@framepages {45}{48}}
+\headcommand {\slideentry {11}{0}{0}{45/49}{}{0}}
+\headcommand {\beamer@framepages {45}{49}}
+\headcommand {\slideentry {11}{0}{0}{45/50}{}{0}}
+\headcommand {\beamer@framepages {45}{50}}
+\headcommand {\slideentry {11}{0}{1}{51/51}{}{0}}
+\headcommand {\beamer@framepages {51}{51}}
+\headcommand {\beamer@partpages {1}{51}}
+\headcommand {\beamer@subsectionpages {44}{51}}
+\headcommand {\beamer@sectionpages {44}{51}}
+\headcommand {\beamer@documentpages {51}}
+\headcommand {\gdef \inserttotalframenumber {51}}
