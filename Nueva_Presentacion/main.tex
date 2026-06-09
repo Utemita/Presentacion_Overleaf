@@ -357,10 +357,10 @@
 
 %-------------------------------------------------------%
 \begin{frame}{An\'alisis Comparativo Cuantitativo de Algoritmos}
-    \small
+    \scriptsize
     \centering
     \renewcommand{\arraystretch}{1.2}
-    \setlength{\tabcolsep}{3pt}
+    \setlength{\tabcolsep}{2pt}
 
     \begin{tabularx}{\textwidth}{|X|c|c|c|c|>{\columncolor[HTML]{FFCE93}}c|c|c|c|}
         \hline
@@ -770,12 +770,10 @@ Se valida la optimizaci\'on mediante un simplificado modelo CAD.
 \scriptsize
 \textbf{Modelo cinem\'atico}
 
-\vspace{0.2cm}
-
 Se calcul\'o la posici\'on del efector final mediante
 la intersecci\'on de dos circunferencias.
 
-\vspace{0.2cm}
+\vspace{0.1cm}
 
 \begin{lstlisting}[language=Python,basicstyle=\ttfamily\tiny]
 d = np.sqrt((Dx - Bx)**2 +
@@ -791,8 +789,6 @@ Py = By + a*(Dy - By)/d
 x = Px + h*(Dy - By)/d
 y = Py - h*(Dx - Bx)/d
 \end{lstlisting}
-
-\vspace{0.2cm}
 
 \textbf{Restricciones geom\'etricas}
 
@@ -886,6 +882,7 @@ def hyper_heuristic_mutation(ind):
         \item \textbf{Alta sensibilidad:} Las ecuaciones de cierre frecuentemente no tienen soluci\'on (penalizaci\'on $10^6$).
         \item \textbf{Hiperheur\'istica limitada:} Dificultad para mantener simult\'aneamente la trayectoria natural y las restricciones mec\'anicas.
         \item \textbf{Costo computacional:} Incremento excesivo al intentar reducir el error.
+        \item \textbf{Longitudes no realistas:} Algunas longitudes de eslabones resultaron mayores a 10\,cm, excediendo las dimensiones f\'isicas del dedo.
     \end{enumerate}
 
     $\Rightarrow$ Se recurri\'o a \textbf{Evoluci\'on Diferencial (DE)} como alternativa.
