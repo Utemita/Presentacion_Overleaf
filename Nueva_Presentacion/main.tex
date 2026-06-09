@@ -390,6 +390,62 @@
     Algoritmos Gen\'eticos (GA) sobresale por su capacidad para optimizar sistemas complejos sin depender de derivadas \cite{deb2012optimization}. El algoritmo garantiza una exploraci\'on global que permite escapar de m\'inimos locales \cite{goldberg1989genetic}, asegurando el cumplimiento de las restricciones bio-mec\'anicas del usuario mediante un manejo de restricciones cinem\'aticas \cite{coello2002theoretical}.
 \end{frame}
 
+%-------------------------------------------------------%
+\subsection{Hiperheur\'istica + AG: Primer Intento}
+
+\begin{frame}[fragile]{Hiperheur\'istica como Gestor del AG}
+    \scriptsize
+    \textbf{Idea:} Usar una hiperheur\'istica como seleccionador din\'amico entre operadores de cruce y mutaci\'on para optimizar el mecanismo completo (5 barras + 4 barras acoplados).
+
+    \vspace{0.2cm}
+    \textbf{Estructura del modelo:}
+    \begin{itemize}
+        \item Vector de dise\~no: 12 variables (bancadas, eslabones, falange, relaci\'on de engranes, offset angular).
+        \item Modelo cinem\'atico: lazo de 5 barras $\rightarrow$ lazo de 4 barras $\rightarrow$ posici\'on IFP.
+        \item Fitness: Error RMS + penalizaci\'on por compacidad.
+    \end{itemize}
+
+    \vspace{0.2cm}
+    \textbf{Fragmento -- Hiperheur\'istica de mutaci\'on:}
+\begin{lstlisting}[language=Python,basicstyle=\ttfamily\tiny]
+def hyper_heuristic_mutation(ind):
+    method = random.choice(['soft','aggressive'])
+    if method == 'soft':
+        idx = random.randint(0, len(ind)-1)
+        ind[idx] += random.uniform(-0.005, 0.005)
+    else:
+        for i in range(len(ind)):
+            if random.random() < 0.3:
+                ind[i] += random.uniform(-0.02, 0.02)
+    return ind
+\end{lstlisting}
+\end{frame}
+
+%-------------------------------------------------------%
+\begin{frame}{Resultados: Hiperheur\'istica + AG}
+    \scriptsize
+    \textbf{Par\'ametros:} Poblaci\'on: 60, Generaciones: 120, Mutaci\'on: 25\%, Cruce: 80\%.
+
+    \textbf{Error RMS final: 0.006 m} (no satisfactorio).
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.85\linewidth]{imagens/resultado_hiper_AG.png}
+        \caption{Resultado del AG con hiperheur\'istica para la articulaci\'on IFP}
+        \label{fig:hiper_ag}
+    \end{figure}
+
+    \vspace{-0.2cm}
+    \textbf{Problemas identificados:}
+    \begin{enumerate}
+        \item \textbf{Alta sensibilidad:} Las ecuaciones de cierre frecuentemente no tienen soluci\'on (penalizaci\'on $10^6$).
+        \item \textbf{Hiperheur\'istica limitada:} Dificultad para mantener simult\'aneamente la trayectoria natural y las restricciones mec\'anicas.
+        \item \textbf{Costo computacional:} Incremento excesivo al intentar reducir el error.
+    \end{enumerate}
+
+    $\Rightarrow$ Se recurri\'o a \textbf{Evoluci\'on Diferencial (DE)} como alternativa.
+\end{frame}
+
 %================================================%
 % SECCION 6: Optimizacion
 %================================================%
