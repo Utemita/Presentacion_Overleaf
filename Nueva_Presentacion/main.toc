@@ -1,19 +1,19 @@
 \babel@toc {spanish}{}
-\beamer@sectionintoc {1}{Introducci\'on}{3}{0}{1}
-\beamer@sectionintoc {2}{Objetivo General}{5}{0}{2}
-\beamer@sectionintoc {3}{Trabajo Anterior}{7}{0}{3}
-\beamer@sectionintoc {4}{Base de Datos}{9}{0}{4}
-\beamer@sectionintoc {5}{Algoritmos de Optimizaci\'on}{11}{0}{5}
-\beamer@subsectionintoc {5}{1}{Evaluaci\'on de las T\'ecnicas de Optimizaci\'on}{15}{0}{5}
-\beamer@sectionintoc {6}{Optimizaci\'on}{18}{0}{6}
-\beamer@subsectionintoc {6}{1}{Modelo Cinem\'atico de Mecanismo de 4 Barras}{19}{0}{6}
-\beamer@subsectionintoc {6}{2}{Algoritmo Gen\'etico: Par\'ametros y Funci\'on Fitness}{20}{0}{6}
-\beamer@subsectionintoc {6}{3}{C\'odigo Python: Algoritmo Gen\'etico y Cinem\'atica}{21}{0}{6}
-\beamer@subsectionintoc {6}{4}{C\'odigo Python: M\'etodo de Procrustes}{23}{0}{6}
-\beamer@subsectionintoc {6}{5}{Resultados: Trayectorias y Error (4 Barras)}{25}{0}{6}
-\beamer@subsectionintoc {6}{6}{Mecanismo de 5 Barras: Topolog\'ia y Cinem\'atica}{28}{0}{6}
-\beamer@subsectionintoc {6}{7}{Resultados: Mecanismo de 5 Barras}{30}{0}{6}
-\beamer@sectionintoc {7}{Conclusiones}{31}{0}{7}
-\beamer@sectionintoc {8}{Lo que falta}{33}{0}{8}
-\beamer@sectionintoc {9}{Cronograma de Actividades}{35}{0}{9}
-\beamer@sectionintoc {10}{Referencias}{38}{0}{10}
+\beamer@sectionintoc {1}{Introducci\'on}{4}{0}{1}
+\beamer@sectionintoc {2}{Objetivo General}{7}{0}{2}
+\beamer@sectionintoc {3}{Trabajo Anterior}{9}{0}{3}
+\beamer@sectionintoc {4}{Base de Datos}{13}{0}{4}
+\beamer@sectionintoc {5}{Algoritmos de Optimizaci\'on}{15}{0}{5}
+\beamer@subsectionintoc {5}{1}{Evaluaci\'on de las T\'ecnicas de Optimizaci\'on}{19}{0}{5}
+\beamer@sectionintoc {6}{Optimizaci\'on}{22}{0}{6}
+\beamer@subsectionintoc {6}{1}{Modelo Cinem\'atico de Mecanismo de 4 Barras}{23}{0}{6}
+\beamer@subsectionintoc {6}{2}{Algoritmo Gen\'etico: Par\'ametros y Funci\'on Fitness}{24}{0}{6}
+\beamer@subsectionintoc {6}{3}{C\'odigo Python: Algoritmo Gen\'etico y Cinem\'atica}{25}{0}{6}
+\beamer@subsectionintoc {6}{4}{C\'odigo Python: M\'etodo de Procrustes}{27}{0}{6}
+\beamer@subsectionintoc {6}{5}{Resultados: Trayectorias y Error (4 Barras)}{29}{0}{6}
+\beamer@subsectionintoc {6}{6}{Mecanismo de 5 Barras: Topolog\'ia y Cinem\'atica}{32}{0}{6}
+\beamer@subsectionintoc {6}{7}{Resultados: Mecanismo de 5 Barras}{34}{0}{6}
+\beamer@sectionintoc {7}{Conclusiones}{35}{0}{7}
+\beamer@sectionintoc {8}{Lo que falta}{37}{0}{8}
+\beamer@sectionintoc {9}{Cronograma de Actividades}{39}{0}{9}
+\beamer@sectionintoc {10}{Referencias}{42}{0}{10}

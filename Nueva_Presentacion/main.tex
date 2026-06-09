@@ -117,15 +117,6 @@
     \begin{block}{Objetivo}
         Dise\~nar y construir un exoesqueleto de eslabones r\'igidos para realizar agarres de pinza fina, empleando t\'ecnicas de an\'alisis cinem\'atico y de optimizaci\'on para adaptar los par\'ametros del mecanismo a distintas medidas antropom\'etricas de la poblaci\'on mexicana.
     \end{block}
-
-    \vspace{0.4cm}
-    \textbf{Objetivos espec\'ificos:}
-    \begin{itemize}
-        \item Dise\~nar los mecanismos que gu\'ian el movimiento de los dedos \'indice, medio y pulgar.
-        \item Optimizar las dimensiones de los mecanismos para minimizar el error entre trayectorias generadas y anat\'omicas.
-        \item Construir un prototipo funcional instrumentado con actuadores y elementos de control.
-        \item Validar el sistema mediante pruebas de movimiento.
-    \end{itemize}
 \end{frame}
 
 %================================================%
@@ -133,19 +124,80 @@
 %================================================%
 \section{Trabajo Anterior}
 
-\begin{frame}{Trabajo Anterior}
-    \textbf{Lo que se ha venido haciendo en semestres pasados:}
+\begin{frame}{Modelo CAD}
+    \scriptsize
+    Se muestra el modelo CAD completo con los tres mecanismos ensamblados, motores y sistemas de transmisi\'on incluidos. El mecanismo de abducci\'on del pulgar (pi\~n\'on-cremallera) sigue en dise\~no (v\'ease Figura \ref{fig:vistas}).
+
+    \begin{figure}
+        \centering
+        \begin{subfigure}[b]{0.4\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{imagens/vista_iso.png}
+            \caption{Isom\'etrico}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.35\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{imagens/lateral.png}
+            \caption{Vista lateral}
+        \end{subfigure}
+
+        \vspace{0.2cm}
+        \begin{subfigure}[b]{0.35\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{imagens/vista superior.png}
+            \caption{Vista superior}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.35\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{imagens/posterior.png}
+            \caption{Vista posterior}
+        \end{subfigure}
+
+        \caption{Vistas del Modelo CAD}
+        \label{fig:vistas}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Construcci\'on}
+    \begin{columns}[T]
+        \begin{column}{0.50\textwidth}
+            \small
+            Una vez terminado el ensamble del modelo CAD, se procede con la construcci\'on de los mecanismos para cada dedo y la verificaci\'on del correcto movimiento (v\'ease Figura \ref{fig:mecanismo}).
+
+            \vspace{0.3cm}
+            Para las piezas se ha usado \textbf{impresi\'on 3D}.
+        \end{column}
+
+        \begin{column}{0.50\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=0.95\linewidth]{imagens/isometrico_sf.png}
+                \caption{Mecanismo construido}
+                \label{fig:mecanismo}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Selecci\'on de Componentes}
+    \small
+    Se seleccionaron componentes mec\'anicos de transmisi\'on (m\'odulo $m=0.5$, metal) y un motor adecuado mediante una \textbf{matriz de decisi\'on ponderada}.
 
     \vspace{0.3cm}
-    \begin{enumerate}
-        \item \textbf{Modelo CAD:} Dise\~no del modelo 3D del exoesqueleto contemplando la geometr\'ia de los dedos y los mecanismos de transmisi\'on de movimiento.
+    \textbf{Componentes principales:}
+    \begin{itemize}
+        \item \textbf{Motor:} Micro-reductor Pololu N20, 39 RPM, 6.7 kgf$\cdot$cm \cite{pololu_5202}
+        \item \textbf{Engranes:} Par de engranes met\'alicos 15T/30T (reducci\'on 2:1)
+        \item \textbf{Tornillo sin fin--corona:} Transmisi\'on a 90$^\circ$, reducci\'on elevada
+        \item \textbf{Pi\~n\'on--cremallera:} Conversi\'on de movimiento rotacional a lineal (abducci\'on del pulgar)
+    \end{itemize}
 
-        \vspace{0.2cm}
-        \item \textbf{Selecci\'on de componentes:} Elecci\'on de actuadores, sensores y elementos mec\'anicos con base en los requerimientos de torque, tama\~no y rango de movimiento.
-
-        \vspace{0.2cm}
-        \item \textbf{Construcci\'on:} Manufactura del prototipo inicial mediante impresi\'on 3D y ensamble de componentes electr\'onicos y mec\'anicos.
-    \end{enumerate}
+    \vspace{0.2cm}
+    \begin{block}{Criterio de selecci\'on del motor}
+        Evaluaci\'on ponderada: torque (20\%), velocidad (20\%), tama\~no (20\%), costo (10\%), \'angulo de giro (10\%), peso (10\%), voltaje (10\%). \textbf{Resultado: Pololu N20 (4.0/5.0)}.
+    \end{block}
 \end{frame}
 
 %================================================%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2026.6.9)  9 JUN 2026 03:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2026.6.9)  9 JUN 2026 07:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -793,7 +793,7 @@ Package: babel 2021/04/26 3.58 The Babel package
 File: babel.def 2021/04/26 3.58 Babel common definitions
 \babel@savecnt=\count323
 \U@D=\dimen288
-\l@unhyphenated=\language48
+\l@unhyphenated=\language3
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read3
@@ -803,14 +803,23 @@ LaTeX Info: Redefining \textlatin on input line 717.
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel-spanish/spanish.ldf
 Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
+
+
+Package babel Warning: No hyphenation patterns were preloaded for
+(babel)                the language `Spanish' into the format.
+(babel)                Please, configure your TeX system to add them and
+(babel)                rebuild the format. Now I will use the patterns
+(babel)                preloaded for \language=0 instead on input line 51.
+
+Package babel Info: Hyphen rules for 'spanish' set to \l@english
+(babel)             (\language0). Reported on input line 52.
 \es@quottoks=\toks48
 \es@quotdepth=\count325
 Package babel Info: Making " an active character on input line 561.
 Package babel Info: Making . an active character on input line 662.
 Package babel Info: Making < an active character on input line 707.
 Package babel Info: Making > an active character on input line 707.
-))
-(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
 \LTleft=\skip67
 \LTright=\skip68
@@ -1128,10 +1137,6 @@ er.pdf> <./utm_large.png (PNG copy)>]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
-Overfull \vbox (15.97826pt too high) detected at line 73
- []
-
-
 Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 
 
@@ -1141,42 +1146,38 @@ Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
-Overfull \vbox (15.97826pt too high) detected at line 78
- []
-
-
 Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 
 
 [3
 
-]
-<imagens/estudio_mov.png, id=219, 632.96475pt x 463.13025pt>
-File: imagens/estudio_mov.png Graphic file (type png)
-<use imagens/estudio_mov.png>
-Package pdftex.def Info: imagens/estudio_mov.png  used on input line 97.
-(pdftex.def)             Requested size: 113.85023pt x 83.29623pt.
+] (./main.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+)
+Overfull \vbox (15.97826pt too high) detected at line 84
+ []
+
 
 Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 
 
 [4
 
- <./imagens/estudio_mov.png>] (./main.toc
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-)
-Overfull \vbox (15.97826pt too high) detected at line 102
- []
-
-
+]
 Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 
 
 [5
 
 ]
-Overfull \vbox (10.92197pt too high) detected at line 117
+<imagens/agarres.PNG, id=276, 1249.66875pt x 990.099pt>
+File: imagens/agarres.PNG Graphic file (type png)
+<use imagens/agarres.PNG>
+Package pdftex.def Info: imagens/agarres.PNG  used on input line 108.
+(pdftex.def)             Requested size: 168.67104pt x 133.62738pt.
+
+Overfull \vbox (5.41354pt too high) detected at line 108
  []
 
 
@@ -1185,11 +1186,11 @@ Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 
 [6
 
-] (./main.toc
+ <./imagens/agarres.PNG>] (./main.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
-Overfull \vbox (15.97826pt too high) detected at line 122
+Overfull \vbox (15.97826pt too high) detected at line 113
  []
 
 
@@ -1208,7 +1209,7 @@ Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
-Overfull \vbox (15.97826pt too high) detected at line 142
+Overfull \vbox (15.97826pt too high) detected at line 125
  []
 
 
@@ -1218,170 +1219,83 @@ Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 [9
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 160
-.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 160
-.
+<imagens/vista_iso.png, id=416, 388.45125pt x 351.714pt>
+File: imagens/vista_iso.png Graphic file (type png)
+<use imagens/vista_iso.png>
+Package pdftex.def Info: imagens/vista_iso.png  used on input line 161.
+(pdftex.def)             Requested size: 112.4445pt x 101.80661pt.
+<imagens/lateral.png, id=417, 456.5055pt x 306.54526pt>
+File: imagens/lateral.png Graphic file (type png)
+<use imagens/lateral.png>
+Package pdftex.def Info: imagens/lateral.png  used on input line 161.
+(pdftex.def)             Requested size: 98.39215pt x 66.06964pt.
+<imagens/vista superior.png, id=418, 708.246pt x 71.66776pt>
+File: imagens/vista superior.png Graphic file (type png)
+<use imagens/vista superior.png>
+Package pdftex.def Info: imagens/vista superior.png  used on input line 161.
+(pdftex.def)             Requested size: 98.39215pt x 9.95576pt.
+<imagens/posterior.png, id=419, 445.06274pt x 380.01974pt>
+File: imagens/posterior.png Graphic file (type png)
+<use imagens/posterior.png>
+Package pdftex.def Info: imagens/posterior.png  used on input line 161.
+(pdftex.def)             Requested size: 98.39215pt x 84.0105pt.
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 160.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 160.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 160.
+Overfull \vbox (66.34874pt too high) detected at line 161
+ []
+
 
 Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 
 
 [10
 
-] (./main.toc
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-)
-Overfull \vbox (15.97826pt too high) detected at line 165
- []
-
+ <./imagens/vista_iso.png> <./imagens/lateral.png> <./imagens/vista superior.pn
+g> <./imagens/posterior.png>]
+<imagens/isometrico_sf.png, id=450, 481.8pt x 521.95pt>
+File: imagens/isometrico_sf.png Graphic file (type png)
+<use imagens/isometrico_sf.png>
+Package pdftex.def Info: imagens/isometrico_sf.png  used on input line 182.
+(pdftex.def)             Requested size: 133.52945pt x 144.65567pt.
 
 Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 
 
 [11
 
-]
+ <./imagens/isometrico_sf.png>]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 201
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 201
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 201.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 201.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <5> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 201.
+
+Overfull \vbox (9.24127pt too high) detected at line 201
+ []
+
+
 Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 
 
 [12
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 201--201
-[]|\T1/phv/m/n/8 Minimiza ite-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 201--201
-\T1/phv/m/n/8 ra-ti-va-men-te
- []
-
-
-Underfull \hbox (badness 1590) in paragraph at lines 201--201
-\T1/phv/m/n/8 usan-do de-ri-va-
- []
-
-
-Underfull \hbox (badness 4156) in paragraph at lines 201--201
-\T1/phv/m/n/8 das. Con-ver-ge
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 201--201
-\T1/phv/m/n/8 en di-rec-ción
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 201--201
-\T1/phv/m/n/8 fun-cio-nes no
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 201--201
-\T1/phv/m/n/8 di-fe-ren-cia-bles
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 201--201
-\T1/phv/m/n/8 [[]]. Al-ta pro-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 201--201
-\T1/phv/m/n/8 ba-bi-li-dad de
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 201--201
-\T1/phv/m/n/8 con-ver-gen-cia
- []
-
-
-Underfull \hbox (badness 5741) in paragraph at lines 201--201
-[]|\T1/phv/m/n/8 Usa de-ri-va-das
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 201--201
-[]|\T1/phv/m/n/8 Aplicable a
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 201--201
-\T1/phv/m/n/8 op-ti-mi-za-ción
- []
-
-
-Underfull \hbox (badness 6575) in paragraph at lines 201--201
-\T1/phv/m/n/8 no sua-ve [[]].
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 201--201
-\T1/phv/m/n/8 Rá-pi-da con-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 201--201
-\T1/phv/m/n/8 ver-gen-cia
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 201--201
-[]|\T1/phv/m/n/8 Cálculo del
- []
-
-
-Underfull \hbox (badness 7064) in paragraph at lines 201--201
-\T1/phv/m/n/8 Hes-siano cos-
- []
-
-
-Underfull \hbox (badness 2547) in paragraph at lines 201--201
-\T1/phv/m/n/8 va-lo-res alea-to-
- []
-
-
-Underfull \hbox (badness 3965) in paragraph at lines 201--201
-\T1/phv/m/n/8 mi-zar el error
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 201--201
-[]|\T1/phv/m/n/8 Alta pre-ci-sión
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 201--201
-\T1/phv/m/n/8 com-ple-ja. Re-
- []
-
-
-Underfull \hbox (badness 7030) in paragraph at lines 201--201
-\T1/phv/m/n/8 quie-re mo-de-lo
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 201--201
-\T1/phv/m/n/8 bien de-fi-ni-do
- []
-
-
-Overfull \vbox (20.56104pt too high) detected at line 201
+] (./main.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+)
+Overfull \vbox (15.97826pt too high) detected at line 206
  []
 
 
@@ -1391,84 +1305,23 @@ Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 [13
 
 ]
-Underfull \hbox (badness 5954) in paragraph at lines 227--227
-\T1/phv/m/n/6 ple-jos. No re-quie-re
- []
-
-
-Underfull \hbox (badness 4132) in paragraph at lines 227--227
-[]|\T1/phv/m/n/6 Requiere ca-li-bra-ción
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 227--227
-[]|\T1/phv/m/n/6 Imita el com-por-ta-
- []
-
-
-Underfull \hbox (badness 4084) in paragraph at lines 227--227
-\T1/phv/m/n/6 mien-to co-lec-ti-vo de
- []
-
-
-Underfull \hbox (badness 3471) in paragraph at lines 227--227
-[]|\T1/phv/m/n/6 Eficiente en pro-ble-
- []
-
-
-Underfull \hbox (badness 1062) in paragraph at lines 227--227
-[]|\T1/phv/m/n/6 Riesgo de es-tan-car-
- []
-
-
-Underfull \hbox (badness 6575) in paragraph at lines 227--227
-\T1/phv/m/n/6 truc-tu-ras re-sis-ten-tes
- []
-
-
-Underfull \hbox (badness 1320) in paragraph at lines 227--227
-[]|\T1/phv/m/n/6 Capacidad de es-ca-
- []
-
-
-Underfull \hbox (badness 4217) in paragraph at lines 227--227
-[]|\T1/phv/m/n/6 Lento, de-pen-de del
- []
-
-
-Underfull \hbox (badness 3148) in paragraph at lines 227--227
-\T1/phv/m/n/6 es-que-ma de en-fria-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 227--227
-[]|\T1/phv/m/n/6 Imita la bús-que-da
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 227--227
-\T1/phv/m/n/6 de ru-tas óp-ti-mas
- []
-
-
-Underfull \hbox (badness 7759) in paragraph at lines 227--227
-[]|\T1/phv/m/n/6 Efectivo en pro-ble-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 227--227
-[]|\T1/phv/m/n/6 Alto cos-to compu-
- []
-
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 224.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 224.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 224.
 
 Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 
 
 [14
 
-]
-Overfull \hbox (3.90213pt too wide) in paragraph at lines 261--261
-[]|\T1/phv/b/n/10 Naturaleza| 
+] (./main.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+)
+Overfull \vbox (15.97826pt too high) detected at line 229
  []
 
 
@@ -1478,27 +1331,240 @@ Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 [15
 
 ]
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 289.
-LaTeX Font Info:    Font shape `T1/phv/b/it' in size <9> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 289.
-
 Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 
 
 [16
 
 ]
+Underfull \hbox (badness 1769) in paragraph at lines 265--265
+\T1/phv/m/n/8 va-mente us-an-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--265
+\T1/phv/m/n/8 do derivadas.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--265
+[]|\T1/phv/m/n/8 Simple, efi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--265
+\T1/phv/m/n/8 ciente en
+ []
+
+
+Underfull \hbox (badness 3049) in paragraph at lines 265--265
+\T1/phv/m/n/8 fun-ciones con-
+ []
+
+
+Package natbib Warning: Citation `rojas2018algoritmos' on page 17 undefined on 
+input line 265.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--265
+[]|\T1/phv/m/n/8 No apli-ca-ble
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--265
+\T1/phv/m/n/8 a fun-ciones
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--265
+\T1/phv/m/n/8 no difer-en-cia-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--265
+\T1/phv/m/n/8 bles [[]]. Al-ta
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--265
+\T1/phv/m/n/8 con-ver-gen-cia
+ []
+
+
+Underfull \hbox (badness 5741) in paragraph at lines 265--265
+[]|\T1/phv/m/n/8 Usa derivadas
+ []
+
+
+Package natbib Warning: Citation `loayza2024optimizacion' on page 17 undefined 
+on input line 265.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--265
+[]|\T1/phv/m/n/8 Aplicable a
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--265
+\T1/phv/m/n/8 op-ti-mización
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--265
+\T1/phv/m/n/8 Ráp-i-da con-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--265
+\T1/phv/m/n/8 ver-gen-cia
+ []
+
+
+Package natbib Warning: Citation `nocedal2006numerical' on page 17 undefined on
+ input line 265.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--265
+[]|\T1/phv/m/n/8 Cálculo del
+ []
+
+
+Underfull \hbox (badness 7064) in paragraph at lines 265--265
+\T1/phv/m/n/8 Hes-siano cos-
+ []
+
+
+Underfull \hbox (badness 3049) in paragraph at lines 265--265
+\T1/phv/m/n/8 fun-ciones con-
+ []
+
+
+Underfull \hbox (badness 2547) in paragraph at lines 265--265
+\T1/phv/m/n/8 val-ores aleato-
+ []
+
+
+Underfull \hbox (badness 2020) in paragraph at lines 265--265
+\T1/phv/m/n/8 rios para min-
+ []
+
+
+Underfull \hbox (badness 2057) in paragraph at lines 265--265
+\T1/phv/m/n/8 i-mizar el er-ror
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--265
+[]|\T1/phv/m/n/8 Alta pre-cisión
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--265
+\T1/phv/m/n/8 com-ple-ja. Re-
+ []
+
+
+Underfull \hbox (badness 7030) in paragraph at lines 265--265
+\T1/phv/m/n/8 quiere mod-e-lo
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--265
+\T1/phv/m/n/8 bi-en definido
+ []
+
+
+Overfull \vbox (20.56104pt too high) detected at line 265
+ []
+
+
 Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 
 
 [17
 
-] (./main.toc
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-)
-Overfull \vbox (15.97826pt too high) detected at line 299
+]
+Underfull \hbox (badness 10000) in paragraph at lines 291--291
+[]|\T1/phv/m/n/6 Simulan evolu-ción
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--291
+\T1/phv/m/n/6 nat-u-ral (se-lec-ción,
+ []
+
+
+Underfull \hbox (badness 5954) in paragraph at lines 291--291
+\T1/phv/m/n/6 ple-jos. No re-quiere
+ []
+
+
+Underfull \hbox (badness 4132) in paragraph at lines 291--291
+[]|\T1/phv/m/n/6 Requiere cal-i-bración
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--291
+[]|\T1/phv/m/n/6 Imita el com-por-
+ []
+
+
+Underfull \hbox (badness 3471) in paragraph at lines 291--291
+[]|\T1/phv/m/n/6 Eficiente en prob-le-
+ []
+
+
+Underfull \hbox (badness 1062) in paragraph at lines 291--291
+[]|\T1/phv/m/n/6 Riesgo de es-tancar-
+ []
+
+
+Package natbib Warning: Citation `abarca2015' on page 18 undefined on input lin
+e 291.
+
+
+Underfull \hbox (badness 1655) in paragraph at lines 291--291
+[]|\T1/phv/m/n/6 Basado en el en-fri-
+ []
+
+
+Underfull \hbox (badness 6575) in paragraph at lines 291--291
+\T1/phv/m/n/6 truc-turas re-sistentes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--291
+[]|\T1/phv/m/n/6 Capacidad de es-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--291
+\T1/phv/m/n/6 capar de óp-ti-mos
+ []
+
+
+Underfull \hbox (badness 4217) in paragraph at lines 291--291
+[]|\T1/phv/m/n/6 Lento, de-pende del
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--291
+\T1/phv/m/n/6 es-que-ma de en-fri-
+ []
+
+
+Underfull \hbox (badness 1881) in paragraph at lines 291--291
+\T1/phv/m/n/6 ru-tas óp-ti-mas me-di-
+ []
+
+
+Underfull \hbox (badness 7759) in paragraph at lines 291--291
+[]|\T1/phv/m/n/6 Efectivo en prob-le-
+ []
+
+
+Underfull \hbox (badness 1622) in paragraph at lines 291--291
+[]|\T1/phv/m/n/6 Alto cos-to com-puta-
  []
 
 
@@ -1508,7 +1574,8 @@ Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 [18
 
 ]
-Overfull \vbox (15.16681pt too high) detected at line 330
+Overfull \hbox (3.90213pt too wide) in paragraph at lines 325--325
+[]|\T1/phv/b/n/10 Naturaleza| 
  []
 
 
@@ -1518,10 +1585,67 @@ Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 [19
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 353--353
+[]|\T1/phv/m/n/10 Escape ópt. lo-
+ []
+
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 353.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <9> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 353.
+
 Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 
 
 [20
+
+]
+
+Package natbib Warning: Citation `deb2012optimization' on page 21 undefined on 
+input line 358.
+
+
+Package natbib Warning: Citation `goldberg1989genetic' on page 21 undefined on 
+input line 358.
+
+
+Package natbib Warning: Citation `coello2002theoretical' on page 21 undefined o
+n input line 358.
+
+
+Overfull \vbox (30.16418pt too high) has occurred while \output is active []
+
+
+[21
+
+] (./main.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+)
+Overfull \vbox (15.97826pt too high) detected at line 363
+ []
+
+
+Overfull \vbox (30.16418pt too high) has occurred while \output is active []
+
+
+[22
+
+]
+Overfull \vbox (15.16681pt too high) detected at line 394
+ []
+
+
+Overfull \vbox (30.16418pt too high) has occurred while \output is active []
+
+
+[23
+
+]
+Overfull \vbox (30.16418pt too high) has occurred while \output is active []
+
+
+[24
 
 ]
 \openout4 = `main.vrb'.
@@ -1534,14 +1658,14 @@ LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 5
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ))
-Overfull \vbox (5.58064pt too high) detected at line 407
+Overfull \vbox (5.58064pt too high) detected at line 471
  []
 
 
 Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 
 
-[21
+[25
 
 ]
 \openout4 = `main.vrb'.
@@ -1550,84 +1674,29 @@ Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <6> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 23.
 )
-Overfull \vbox (10.34184pt too high) detected at line 454
+Overfull \vbox (10.34184pt too high) detected at line 518
  []
 
-
-Overfull \vbox (30.16418pt too high) has occurred while \output is active []
-
-
-[22
-
-]
-\openout4 = `main.vrb'.
-
- (./main.vrb)
-Overfull \vbox (30.16418pt too high) has occurred while \output is active []
-
-
-[23
-
-]
-\openout4 = `main.vrb'.
-
- (./main.vrb)
-Overfull \vbox (30.51463pt too high) detected at line 554
- []
-
-
-Overfull \vbox (30.16418pt too high) has occurred while \output is active []
-
-
-[24
-
-]
-<imagens/tray_opt2_sp.png, id=890, 462.528pt x 346.896pt>
-File: imagens/tray_opt2_sp.png Graphic file (type png)
-<use imagens/tray_opt2_sp.png>
-Package pdftex.def Info: imagens/tray_opt2_sp.png  used on input line 579.
-(pdftex.def)             Requested size: 134.93427pt x 101.20068pt.
-<imagens/tray_opt3_cp.png, id=891, 462.528pt x 346.896pt>
-File: imagens/tray_opt3_cp.png Graphic file (type png)
-<use imagens/tray_opt3_cp.png>
-Package pdftex.def Info: imagens/tray_opt3_cp.png  used on input line 579.
-(pdftex.def)             Requested size: 134.93427pt x 101.20068pt.
-
-Overfull \vbox (30.16418pt too high) has occurred while \output is active []
-
-
-[25
-
- <./imagens/tray_opt2_sp.png> <./imagens/tray_opt3_cp.png>]
-<imagens/error_opt2_sp.png, id=924, 462.528pt x 346.896pt>
-File: imagens/error_opt2_sp.png Graphic file (type png)
-<use imagens/error_opt2_sp.png>
-Package pdftex.def Info: imagens/error_opt2_sp.png  used on input line 602.
-(pdftex.def)             Requested size: 137.74815pt x 103.31267pt.
-<imagens/error_opt3_cp.png, id=925, 462.528pt x 346.896pt>
-File: imagens/error_opt3_cp.png Graphic file (type png)
-<use imagens/error_opt3_cp.png>
-Package pdftex.def Info: imagens/error_opt3_cp.png  used on input line 602.
-(pdftex.def)             Requested size: 137.74815pt x 103.31267pt.
 
 Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 
 
 [26
 
- <./imagens/error_opt2_sp.png> <./imagens/error_opt3_cp.png>]
-File: imagens/estudio_mov.png Graphic file (type png)
-<use imagens/estudio_mov.png>
-Package pdftex.def Info: imagens/estudio_mov.png  used on input line 634.
-(pdftex.def)             Requested size: 140.55777pt x 102.84299pt.
+]
+\openout4 = `main.vrb'.
 
+ (./main.vrb)
 Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 
 
 [27
 
 ]
-Overfull \vbox (10.93672pt too high) detected at line 666
+\openout4 = `main.vrb'.
+
+ (./main.vrb)
+Overfull \vbox (30.51463pt too high) detected at line 618
  []
 
 
@@ -1637,78 +1706,96 @@ Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 [28
 
 ]
-\openout4 = `main.vrb'.
+<imagens/tray_opt2_sp.png, id=996, 462.528pt x 346.896pt>
+File: imagens/tray_opt2_sp.png Graphic file (type png)
+<use imagens/tray_opt2_sp.png>
+Package pdftex.def Info: imagens/tray_opt2_sp.png  used on input line 643.
+(pdftex.def)             Requested size: 134.93427pt x 101.20068pt.
+<imagens/tray_opt3_cp.png, id=997, 462.528pt x 346.896pt>
+File: imagens/tray_opt3_cp.png Graphic file (type png)
+<use imagens/tray_opt3_cp.png>
+Package pdftex.def Info: imagens/tray_opt3_cp.png  used on input line 643.
+(pdftex.def)             Requested size: 134.93427pt x 101.20068pt.
 
- (./main.vrb)
 Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 
 
 [29
 
-]
-<imagens/tray_5b.png, id=1028, 462.528pt x 346.896pt>
-File: imagens/tray_5b.png Graphic file (type png)
-<use imagens/tray_5b.png>
-Package pdftex.def Info: imagens/tray_5b.png  used on input line 736.
+ <./imagens/tray_opt2_sp.png> <./imagens/tray_opt3_cp.png>]
+<imagens/error_opt2_sp.png, id=1029, 462.528pt x 346.896pt>
+File: imagens/error_opt2_sp.png Graphic file (type png)
+<use imagens/error_opt2_sp.png>
+Package pdftex.def Info: imagens/error_opt2_sp.png  used on input line 666.
 (pdftex.def)             Requested size: 137.74815pt x 103.31267pt.
-<imagens/error_5b.png, id=1029, 462.528pt x 346.896pt>
-File: imagens/error_5b.png Graphic file (type png)
-<use imagens/error_5b.png>
-Package pdftex.def Info: imagens/error_5b.png  used on input line 736.
+<imagens/error_opt3_cp.png, id=1030, 462.528pt x 346.896pt>
+File: imagens/error_opt3_cp.png Graphic file (type png)
+<use imagens/error_opt3_cp.png>
+Package pdftex.def Info: imagens/error_opt3_cp.png  used on input line 666.
 (pdftex.def)             Requested size: 137.74815pt x 103.31267pt.
-
-Overfull \vbox (4.53896pt too high) detected at line 736
- []
-
 
 Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 
 
 [30
 
- <./imagens/tray_5b.png> <./imagens/error_5b.png>] (./main.toc
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-)
-Overfull \vbox (15.97826pt too high) detected at line 741
- []
-
+ <./imagens/error_opt2_sp.png> <./imagens/error_opt3_cp.png>]
+<imagens/estudio_mov.png, id=1058, 632.96475pt x 463.13025pt>
+File: imagens/estudio_mov.png Graphic file (type png)
+<use imagens/estudio_mov.png>
+Package pdftex.def Info: imagens/estudio_mov.png  used on input line 698.
+(pdftex.def)             Requested size: 140.55777pt x 102.84299pt.
 
 Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 
 
 [31
 
-]
-Overfull \vbox (30.16418pt too high) has occurred while \output is active []
-
-
-[32
-
-] (./main.toc
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-)
-Overfull \vbox (15.97826pt too high) detected at line 756
+ <./imagens/estudio_mov.png>]
+Overfull \vbox (10.93672pt too high) detected at line 730
  []
 
 
 Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 
 
+[32
+
+]
+\openout4 = `main.vrb'.
+
+ (./main.vrb)
+Overfull \vbox (30.16418pt too high) has occurred while \output is active []
+
+
 [33
 
 ]
+<imagens/tray_5b.png, id=1136, 462.528pt x 346.896pt>
+File: imagens/tray_5b.png Graphic file (type png)
+<use imagens/tray_5b.png>
+Package pdftex.def Info: imagens/tray_5b.png  used on input line 800.
+(pdftex.def)             Requested size: 137.74815pt x 103.31267pt.
+<imagens/error_5b.png, id=1137, 462.528pt x 346.896pt>
+File: imagens/error_5b.png Graphic file (type png)
+<use imagens/error_5b.png>
+Package pdftex.def Info: imagens/error_5b.png  used on input line 800.
+(pdftex.def)             Requested size: 137.74815pt x 103.31267pt.
+
+Overfull \vbox (4.53896pt too high) detected at line 800
+ []
+
+
 Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 
 
 [34
 
-] (./main.toc
+ <./imagens/tray_5b.png> <./imagens/error_5b.png>] (./main.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
-Overfull \vbox (15.97826pt too high) detected at line 771
+Overfull \vbox (15.97826pt too high) detected at line 805
  []
 
 
@@ -1718,29 +1805,16 @@ Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 [35
 
 ]
-<imagens/2.png, id=1230, 770.88pt x 578.16pt>
-File: imagens/2.png Graphic file (type png)
-<use imagens/2.png>
-Package pdftex.def Info: imagens/2.png  used on input line 780.
-(pdftex.def)             Requested size: 267.05891pt x 200.29468pt.
-
-Overfull \vbox (9.85587pt too high) detected at line 780
- []
-
-
 Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 
 
 [36
 
- <./imagens/2.png (PNG copy)>]
-<imagens/2.1.png, id=1256, 770.88pt x 578.16pt>
-File: imagens/2.1.png Graphic file (type png)
-<use imagens/2.1.png>
-Package pdftex.def Info: imagens/2.1.png  used on input line 789.
-(pdftex.def)             Requested size: 267.05891pt x 200.29468pt.
-
-Overfull \vbox (9.85587pt too high) detected at line 789
+] (./main.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+)
+Overfull \vbox (15.97826pt too high) detected at line 820
  []
 
 
@@ -1749,52 +1823,75 @@ Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 
 [37
 
- <./imagens/2.1.png>] (./main.toc
+]
+Overfull \vbox (30.16418pt too high) has occurred while \output is active []
+
+
+[38
+
+] (./main.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
-Overfull \vbox (15.97826pt too high) detected at line 794
+Overfull \vbox (15.97826pt too high) detected at line 835
  []
 
 
 Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 
 
-[38
-
-] (./main.bbl)
-Overfull \vbox (30.16418pt too high) has occurred while \output is active []
-
-
 [39
 
 ]
+<imagens/2.png, id=1338, 770.88pt x 578.16pt>
+File: imagens/2.png Graphic file (type png)
+<use imagens/2.png>
+Package pdftex.def Info: imagens/2.png  used on input line 844.
+(pdftex.def)             Requested size: 267.05891pt x 200.29468pt.
+
+Overfull \vbox (9.85587pt too high) detected at line 844
+ []
+
+
 Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 
 
 [40
 
+ <./imagens/2.png (PNG copy)>]
+<imagens/2.1.png, id=1364, 770.88pt x 578.16pt>
+File: imagens/2.1.png Graphic file (type png)
+<use imagens/2.1.png>
+Package pdftex.def Info: imagens/2.1.png  used on input line 853.
+(pdftex.def)             Requested size: 267.05891pt x 200.29468pt.
 
-]
+Overfull \vbox (9.85587pt too high) detected at line 853
+ []
+
+
 Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 
 
 [41
 
+ <./imagens/2.1.png>] (./main.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+)
+Overfull \vbox (15.97826pt too high) detected at line 858
+ []
 
-]
+
 Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 
 
 [42
 
-
-]
+] (./main.bbl)
 Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 
 
 [43
-
 
 ]
 Overfull \vbox (30.16418pt too high) has occurred while \output is active []
@@ -1803,7 +1900,35 @@ Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 [44
 
 
-] [45
+]
+Overfull \vbox (30.16418pt too high) has occurred while \output is active []
+
+
+[45
+
+
+]
+Overfull \vbox (30.16418pt too high) has occurred while \output is active []
+
+
+[46
+
+
+]
+Overfull \vbox (30.16418pt too high) has occurred while \output is active []
+
+
+[47
+
+
+]
+Overfull \vbox (30.16418pt too high) has occurred while \output is active []
+
+
+[48
+
+
+] [49
 
  <./UTM.png>]
 \tf@nav=\write6
@@ -1815,20 +1940,24 @@ Overfull \vbox (30.16418pt too high) has occurred while \output is active []
 \tf@snm=\write8
 \openout8 = `main.snm'.
 
- (./main.aux
+
+
+Package natbib Warning: There were undefined citations.
+
+(./main.aux
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 )
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 29DCF7376C7AEDB123AE83BBED9C6BCD;3656.
+(rerunfilecheck)             Checksum: 0A3F1E2908D2BA181CE24C7D6224084B;3656.
  ) 
 Here is how much of TeX's memory you used:
- 26656 strings out of 479957
- 473616 string characters out of 5879164
- 996329 words of memory out of 6000000
- 43369 multiletter control sequences out of 15000+600000
+ 26714 strings out of 480806
+ 474340 string characters out of 5905152
+ 994467 words of memory out of 6000000
+ 43325 multiletter control sequences out of 15000+600000
  484527 words of font info for 111 fonts, out of 8000000 for 9000
- 430 hyphenation exceptions out of 8191
+ 14 hyphenation exceptions out of 8191
  128i,16n,126p,430b,1305s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr
 /share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf
@@ -1838,16 +1967,18 @@ type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (45 pages, 826509 bytes).
+msy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helveti
+c/uhvro8a.pfb>
+Output written on main.pdf (49 pages, 2936063 bytes).
 PDF statistics:
- 1556 PDF objects out of 1728 (max. 8388607)
- 1423 compressed objects within 15 object streams
- 141 named destinations out of 1000 (max. 500000)
- 265 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1675 PDF objects out of 1728 (max. 8388607)
+ 1531 compressed objects within 16 object streams
+ 151 named destinations out of 1000 (max. 500000)
+ 295 words of extra memory for PDF output out of 10000 (max. 10000000)
 
