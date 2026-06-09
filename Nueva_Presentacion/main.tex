@@ -957,7 +957,7 @@ def hyper_heuristic_mutation(ind):
 %-------------------------------------------------------%
 \begin{frame}{Distancia de Chamfer como M\'etrica de Forma}
     \scriptsize
-    \textbf{?`Por qu\'e Chamfer en lugar de RMS punto a punto?} \cite{fan2017chamfer}
+    \textbf{?`Por qu\'e Chamfer en lugar de RMS punto a punto?} \cite{borgefors1988hierarchical, fan2017chamfer}
     \vspace{0.2cm}
 
     \textbf{Definici\'on:}
@@ -1016,12 +1016,12 @@ def fitness_function(p):
     \scriptsize
     \begin{figure}
         \centering
-        \includegraphics[width=0.85\linewidth]{imagens/resultado_de_optuna.png}
+        \includegraphics[width=0.75\linewidth]{imagens/resultado_de_optuna.png}
         \caption{Trayectorias MOCAP vs.\ EXO optimizado con DE + Optuna}
         \label{fig:resultado_de_optuna}
     \end{figure}
 
-    \vspace{-0.2cm}
+    \vspace{-0.3cm}
     \begin{columns}[T]
     \begin{column}{0.45\textwidth}
         \textbf{AG + Hiperheur\'istica:}
@@ -1054,11 +1054,12 @@ def fitness_function(p):
 
 \begin{frame}{Conclusiones}
     \begin{itemize}
-        \item Se implement\'o exitosamente un Algoritmo Gen\'etico para la optimizaci\'on de mecanismos de 4 y 5 barras.
+        \item Se implement\'o un Algoritmo Gen\'etico con hiperheur\'istica para la optimizaci\'on de mecanismos de 4 y 5 barras, y posteriormente se mejor\'o con Evoluci\'on Diferencial + Optuna.
         \item El m\'etodo de Procrustes mejor\'o significativamente la alineaci\'on entre trayectorias, reduciendo el error RMS.
+        \item La combinaci\'on DE + Optuna + Distancia de Chamfer logr\'o un error global menor a 1\,mm, superando en m\'as de 6$\times$ al enfoque previo con AG.
         \item El mecanismo de 5 barras ofrece mayor flexibilidad geom\'etrica para reproducir trayectorias anat\'omicas.
-        \item Los resultados obtenidos validan la viabilidad del enfoque de optimizaci\'on para el dise\~no del exoesqueleto.
         \item Se valid\'o el mecanismo de 4 barras mediante un modelo CAD simplificado.
+        \item En conjunto, los resultados demuestran que la optimizaci\'on metaheur\'istica combinada con m\'etricas robustas de forma es viable para el dise\~no dimensional de exoesqueletos de rehabilitaci\'on.
     \end{itemize}
 \end{frame}
 
@@ -1069,8 +1070,7 @@ def fitness_function(p):
 
 \begin{frame}{Siguientes Pasos}
     \begin{itemize}
-        \item Realizar la validaci\'on del algoritmo para el mecanismo de 5 barras.
-        \item Implementar una hiperheur\'istica que act\'ue como un gestor inteligente del sistema completo. En lugar de ejecutar el Algoritmo Gen\'etico de forma est\'atica.
+        \item Se est\'a armando el modelo CAD con las nuevas medidas para despu\'es validar los resultados del estudio de movimiento con lo obtenido con el algoritmo de optimizaci\'on y volver a armarlo en f\'isico con estas nuevas medidas.
         \item Integrar los mecanismos optimizados al modelo CAD completo del exoesqueleto.
         \item Instrumentar el prototipo con actuadores y sensores.
         \item Realizar pruebas de funcionamiento con el prototipo f\'isico.

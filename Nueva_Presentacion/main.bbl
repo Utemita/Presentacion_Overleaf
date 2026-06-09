@@ -155,6 +155,11 @@ T.~Akiba, S.~Sano, T.~Yanase, T.~Ohta, and M.~Koyama, ``Optuna: A
   of the 25th ACM SIGKDD International Conference on Knowledge Discovery \&
   Data Mining}, pp.~2623--2631, ACM, 2019.
 
+\bibitem{borgefors1988hierarchical}
+G.~Borgefors, ``Hierarchical chamfer matching: A parametric edge matching
+  algorithm,'' in {\em IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}, vol.~10, pp.~849--865, IEEE, 1988.
+
 \bibitem{fan2017chamfer}
 H.~Fan, H.~Su, and L.~J. Guibas, ``A point set generation network for 3d object
   reconstruction from a single image,'' in {\em Proceedings of the IEEE
