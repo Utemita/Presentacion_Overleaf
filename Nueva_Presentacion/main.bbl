@@ -1,0 +1,147 @@
+\begin{thebibliography}{10}
+
+\bibitem{kim2017}
+J.~H. Kim, ````{T}he effects of training using emg biofeedback on stroke
+  patients upper extremity functions'','' {\em Physical Therapy Science},
+  vol.~29, no.~6, pp.~1085–--1088, 2017.
+
+\bibitem{ueki2012}
+S.~Ueki, H.~Kawasaki, S.~Ito, Y.~Nishimoto, M.~Abe, and A.~T. Abe,
+  ````{D}evelopment of a hand-assist robot with multi-degrees-of-freedom for
+  rehabilitation therapy'','' {\em IEEE/ASME Transactions on Mechatronics},
+  vol.~17, no.~1, pp.~136--146, 2012.
+
+\bibitem{Fukui2025}
+R.~Fukui and W.~Lovegreen, ````{R}obotics in rehabilitation medicine:
+  Prosthetics, exoskeletons, all else in rehabilitation medicine'','' {\em
+  Robotics in Physical Medicine and Rehabilitations}, vol.~1, no.~1,
+  p.~65–91, 2025.
+
+\bibitem{Feix2016}
+T.~Feix, J.~Romero, H.-B. Schmiedmayer, A.~M. Dollar, and D.~Kragic, ````{T}he
+  grasp taxonomy of human grasp types'','' {\em IEEE Transactions on
+  Human-Machine Systems}, vol.~46, no.~1, pp.~66--77, 2016.
+
+\bibitem{gardenia2022}
+G.~R. Aguirre, M.~G. Cedeño, and A.~L. Piguave, ````{C}oordinación
+  grafoperceptiva: incidencia en el desarrollo de la motricidad fina en niños
+  de 5 a 6 años de edad'','' {\em Ciencia Unemi}, vol.~10, no.~22, pp.~40--47,
+  2022.
+
+\bibitem{pololu_5202}
+P.~Corporation, ````{P}ololu robotics \& electronics''.''
+  \url{https://www.pololu.com/product/5202}, 2025.
+
+\bibitem{Pizzolato2017}
+S.~Pizzolato, L.~Tagliapietra, M.~Cognolato, M.~Reggiani, H.~M{\"u}ller, and
+  M.~Atzori, ``Comparison of six electromyography acquisition setups on hand
+  movement classification tasks,'' {\em Scientific Data}, vol.~4, p.~170151,
+  2017.
+
+\bibitem{ebrahimi2015efficient}
+S.~Ebrahimi and P.~Payvandy, ``Efficient constrained synthesis of path
+  generating four-bar mechanisms based on the heuristic optimization
+  algorithms,'' {\em Mechanism and Machine Theory}, vol.~85, pp.~189--204,
+  2015.
+
+\bibitem{Cabrera2002}
+J.~Cabrera, A.~Simon, and M.~Prado, ````{O}ptimal synthesis of mechanisms with
+  genetic algorithms'','' {\em Mechanism and Machine Theory}, vol.~37, no.~1,
+  pp.~1165--1177, 2002.
+
+\bibitem{deb2012optimization}
+K.~Deb, {\em Optimization for Engineering Design: Algorithms and Examples}.
+\newblock PHI Learning Pvt. Ltd., 2~ed., 2012.
+
+\bibitem{granada2006}
+E.~Granada, E.~Toro, and Z.~E. Antonio, ````{O}ptimización matemática en
+  superficies de desempeño de redes neuronales artificiales'','' {\em Scientia
+  Et Technica}, vol.~XII, pp.~121--126, Dec. 2006.
+
+\bibitem{Rojas2018}
+J.~R. Delgado, ``Algoritmos meta-heurísticos de optimización aplicados al
+  entrenamiento de redes neuronales profundas,'' Master's thesis, Universidad
+  de las Ciencias Informáticas, 2018.
+
+\bibitem{Loayza2024}
+L.~L. Romero, ``Optimización no suave a través de métodos de tipo newton:
+  Optimización no suave a través de métodos bfgs y l-bfgs,'' Master's
+  thesis, Escuela Politécnica Nacional, 2024.
+
+\bibitem{Nocedal2006}
+J.~Nocedal and J.~S. Wright, {\em Numerical Optimization}.
+\newblock New York: Springer, 2~ed., 2006.
+
+\bibitem{fernandez2019optimizacion}
+C.~Fernández, N.~Pantano, S.~Godoy, E.~Serrano, and G.~Scaglia,
+  ``Optimización de parámetros utilizando los métodos de monte carlo y
+  algoritmos evolutivos,'' {\em Revista Iberoamericana de Automática e
+  Informática Industrial}, vol.~16, no.~1, pp.~89--99, 2019.
+
+\bibitem{zhang2024computer}
+Y.~Zhang and Z.~Zhang, ````{C}omputer aided design of a single
+  degree-of-freedom six-bar mechanism via monte carlo layered optimization
+  method'','' {\em Heliyon}, vol.~10, no.~5, p.~e31033, 2024.
+
+\bibitem{valencia1997optimizacion}
+P.~V. Estévez, ``Optimización mediante algoritmos genéticos,'' {\em Anales
+  del Instituto de Ingenieros de Chile}, vol.~109, no.~2, pp.~83--92, 1997.
+
+\bibitem{zheng2024genetic}
+Q.~Zheng, W.-J. Zhu, Q.~Zhi, H.~Sun, D.~Li, and X.~Ding, ````{G}enetic
+  algorithm optimization design of gradient conformal chiral metamaterials and
+  3d printing verification for morphing wings'','' {\em Chinese Journal of
+  Mechanical Engineering (English Edition)}, vol.~37, p.~143, Nov. 2024.
+
+\bibitem{lopez2014evaluacion}
+R.~L. César, ``Evaluación de desempeño de dos técnicas de optimización
+  bio-inspiradas: Algoritmos genéticos y enjambre de partículas,'' {\em
+  Tekhnê}, vol.~11, no.~1, pp.~49--58, 2014.
+
+\bibitem{zhang2015}
+Y.~Zhang, S.~Wang, and G.~Ji, ````{A} comprehensive survey on particle swarm
+  optimization algorithm and its applications'','' {\em Mathematical Problems
+  in Engineering}, vol.~2015, no.~1, pp.~1--38, 2015.
+
+\bibitem{abarca2015aplicaciones}
+J.~del Carmen~Peralta, J.~C. Juárez, and B.~B. Martínez, ``Aplicaciones de
+  recocido simulado en problemas de optimización combinatoria,'' {\em
+  Inventio}, vol.~11, no.~23, pp.~23--28, 2015.
+
+\bibitem{centeno2016recocido}
+M.~C. Romero and R.~Velásquez, ````{U}n algoritmo metaheurístico de recocido
+  simulado para el 3ap-axial'','' {\em SABER. Revista Multidisciplinaria del
+  Consejo de Investigación de la Universidad de Oriente}, vol.~28, no.~3,
+  pp.~566--573, 2016.
+
+\bibitem{carlos2024}
+C.~A.~C. Coello, ````{I}ntroducción a la optimización multiobjetivo'','' {\em
+  CINESTAV}, vol.~1, no.~1, pp.~243--256, 2024.
+
+\bibitem{alonso2017}
+F.~A. Zotes and M.~S. Peñas, ````{U}na revisión de técnicas de optimización
+  heurística para el diseño de trayectorias interplanetarias en misiones
+  espaciales'','' {\em CEA}, vol.~14, no.~1, pp.~1--15, 2017.
+
+\bibitem{goldberg1989genetic}
+D.~E. Goldberg, {\em Genetic Algorithms in Search, Optimization, and Machine
+  Learning}.
+\newblock Addison-Wesley, 1989.
+
+\bibitem{coello2002theoretical}
+C.~A.~C. Coello, ``Theoretical and numerical constraint-handling techniques
+  used with evolutionary algorithms: a survey of the state of the art,'' {\em
+  Computer Methods in Applied Mechanics and Engineering}, vol.~191, no.~11-12,
+  pp.~1245--1287, 2002.
+
+\bibitem{Norton2012}
+R.~L. Norton, {\em Design of Machinery: An Introduction to the Synthesis and
+  Analysis of Mechanisms and Machines}.
+\newblock McGraw-Hill, 5~ed., 2012.
+
+\bibitem{Liu2006}
+X.~J. Liu, J.~Wang, and G.~Pritschow, ``Kinematics, singularity and workspace
+  of planar 5r symmetrical parallel mechanisms,'' {\em Mechanism and Machine
+  Theory}, vol.~41, no.~2, pp.~145--169, 2006.
+
+\end{thebibliography}
