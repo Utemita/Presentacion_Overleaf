@@ -1,0 +1,279 @@
+\section{Selección de Componentes Mecánicos}
+
+\begin{longtable}{|p{2.5cm}|p{3.0cm}|p{2.0cm}|p{4.0cm}|p{4.0cm}|}
+\caption{Comparativa de motores para exoesqueleto con posibilidad de control cinemático}
+\label{tab:comparativa_motores_exo} \\
+
+\hline
+\rowcolor[HTML]{C0C0C0}
+\textbf{Tipo de motor} & \textbf{Características} & \textbf{¿Control cinemático?} & \textbf{Ventajas} & \textbf{Desventajas} \\ \hline
+\endfirsthead
+\multicolumn{5}{c}%
+{{\tablename\ \thetable{} -- continuaci\'on de la tabla}} \\
+\hline
+\textbf{Tipo de motor} & \textbf{Características} & \textbf{¿Control cinemático?} & \textbf{Ventajas} & \textbf{Desventajas} \\ \hline
+\endhead
+
+\hline \multicolumn{5}{r}{{Continúa en la siguiente página}} \\ \hline
+\endfoot
+
+\hline
+\endlastfoot
+
+%---------------- FILAS ----------------%
+
+\textbf{Pololu Micro Metal Gearmotor N20\cite{pololu_5202}} 
+& 1. Par: 6.7 kgf*cm
+
+  2. Velocidad: 39 RPM sin carga 
+  
+  3. Voltaje: 6 V 
+  
+  4. Corriente sin carga: 70 mA 
+  
+  5. Dimensiones: 13.6 × 13 × 42.5 mm
+& Sí, con encoder (PID pos/vel) 
+& 1. Buena densidad de par con altas relaciones 
+
+  2. Fáciles de conseguir 
+  3. Tamaño pequeño (13.6 × 42.5 mm) 
+  
+  4. Disponibles con codificador 
+  
+  5. Escobillas precisas y duraderas
+& 1. Backlash y holguras en la reductora 
+
+  2. Potencia media 
+  
+  3. Costosos  \\ \hline
+
+\textbf{Servomotor Tower Pro MG996R \cite{sandorobotics_mg996r}}
+& 1. Voltaje: 4.8–7.2 V 
+
+  2. Velocidad: 0.17 s/60° (4.8V), 0.14 s/60° (7.2V) 
+  
+  3. Torque: 9.4–11 kgf·cm 
+  
+  4. Doble rodamiento 
+  
+  5. Ángulo: 180 $\degree$
+  
+  6. Peso: 55 g 
+  
+  7. Dimensiones: 40.7 × 19.7 × 42.9 mm
+& Sí (posición); No (velocidad)
+& 1. Bajo costo
+
+  2. Fácil uso con microcontroladores
+  
+  3. Alto torque
+& 1. Control de velocidad impreciso 
+
+  2. Variabilidad en repetibilidad
+  
+  3. Pesado
+  4. Tamaño mediano \\ \hline
+
+\textbf{Servomotor Tower Pro MG90S (giro continuo)\cite{sandorobotics_mg90s_gc}}
+& 1. Voltaje: 4.8–6.0 V 
+
+  2. Torque: 1.8–2.2 kgf·cm 
+  
+  3. Engranes metálicos 
+  
+  4. Rotación: 360$\degree$ 
+  5. Peso: 13.4 g 
+  
+  6. Dimensiones: 22.8 × 12.2 × 28.5 mm
+& Solo cinemático abierto por PWM (sin feedback)
+& 1. Muy económico 
+
+  2. Tamaño pequeño 
+  
+  3. Fácil integración 
+  
+  4. Adecuado para cinemática directa
+& 1. Par moderado 
+
+  2. Más voluminoso que un N20 
+  
+  3. Sin retroalimentación de posición \\ \hline
+
+\textbf{Servo, Mini Metal Gear and TTL Serial Bus \cite{aliexpress_1005005950881566}}
+& 1. Voltaje: 6.0 V 
+
+  2. Velocidad: 0.1 s/60° (100 rpm) 
+  
+  3. Torque: 2.3 kgf·cm 
+  
+  4. Rotación: 300$\degree$
+  5. Peso: 13 g 
+  
+  6. Dimensiones: 23.3 × 12.0 × 25.5 mm
+& Sí (posición y velocidad)
+& 1. Bajo peso 
+
+  2. Con retroalimentación 
+  
+  3. Buena precisión
+& Velocidad demasiado alta \\ \hline
+
+\textbf{Linear Motor(Maxon/Faulhaber EC)\cite{faulhaber_bldc}}
+& 1. Voltaje: 7.5 V 
+
+  2. Velocidad: 6.5 mm/s 
+  
+  3. Fuerza máx.: 80 N 
+  
+  4. Opciones de stroke 
+  
+  5. Peso: 40 g
+& Sí, con encoder
+& 1. Alta eficiencia 
+
+  2. Muy preciso
+& 1. Controlador complejo (FOC) 
+
+  2. Muy costoso 
+  
+  3. Peso moderado \\ \hline
+
+\textbf{Feetech SC009 Micro Servo Metal Gear\cite{aliexpress_1005009157922082}}
+& 1. Voltaje: 4.8–6.0 V 
+
+  2. Velocidad: 0.12–0.10 s/60$\degree$
+  
+  3. Torque: 2.3 kgf·cm 
+  
+  4. Ángulo: 300° 
+  
+  5. Peso: 9 g 
+  
+  6. Dimensiones: 23.3 × 12.5 × 22.0 mm
+& Sí, con encoder
+& 1. Engranes metálicos 
+
+  2. Comunicación TTL 
+  
+  3. Muy pequeño 
+  
+  4. Ligero 
+  
+  5. Buen torque 
+  
+  6. Respuesta rápida
+&  Velocidad excesiva \\ \hline
+
+\end{longtable}
+
+
+Después de recopilar y analizar las características de cada motor, se procede a evaluar estas características por medio de una matriz de decisión ponderada como se observa en la tabla \ref{tab::MD}.Cada característica se evalúa de acuerdo a un criterio propio, basado en las necesidades encontradas para el buen funcionamiento del exoesqueleto. Así mismo los pesos se han definido de acuerdo al criterio del diseñador. Para evaluar cada característica se ha tomado una escala de 1 a 5. Al final estos pesos se suman y se elige al mas alto.
+
+
+
+
+\begin{table}[H]
+\centering
+\caption{Matriz de decisión para la selección del motor}
+\label{tab::MD}
+\begin{tabular}{|p{2cm}|p{1cm}|p{2.1cm}|p{2.1cm}|p{2.1cm}|p{2.1cm}|p{2.1cm}|p{2.1cm}|}
+\hline
+\rowcolor[HTML]{C0C0C0}
+\textbf{Criterio} & \textbf{Peso} & \textbf{Pololu Mi-
+cro Metal Gearmotor N20} & \textbf{Servomotor Tower Pro MG996R} & \textbf{Servomotor TowerPro MG90s(giro continuo)} & \textbf{Mini metal servomotor, TTL serial BUS} & \textbf{Linear Motor Maxon Faulhaber} & \textbf{Feetech SC009 micro servo}\\
+\hline
+Torque      & 0.20  & 5 & 4 & 3 & 4& 3& 4\\   \hline
+Velocidad   & 0.20  & 4 & 3 & 4 & 3& 2& 3\\   \hline
+Tamaño      & 0.20  & 4 & 2 & 3 & 3& 3& 4\\   \hline
+Costo       & 0.10  & 3 & 4 & 5 & 4& 2& 4\\   \hline
+Ángulo de giro o desplazamiento & 0.10 & 3 & 4 & 5 & 4& 3& 4\\   \hline
+Peso        & 0.10  & 4 & 2 & 4 & 4& 2& 5\\   \hline
+Voltaje de alimentación & 0.10 & 4 & 3 & 4 & 4& 2& 4\\   \hline
+\hline
+\textbf{Total} &      & \textbf{4.0} & \textbf{3.1} & \textbf{3.8} & \textbf{3.6} & \textbf{2.5} & \textbf{3.9}\\\hline
+\end{tabular}
+\end{table}
+
+
+De acuerdo a los resultados de la matriz de decisión, el motor adecuado para esta aplicación es el micro-reductor de engranajes metálicos pololu de 39 rpm, el cual se muestra en la figura \ref{fig::pololu}. 
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{imagenes/POLOLU.jpg}
+    \caption{Micro reductor de engranajes metálicos pololu}
+    \label{fig::pololu}
+\end{figure}
+
+
+Para la construcción del exoesqueleto se seleccionaron diversos componentes mecánicos de transmisión tales como engranes, tornillos sin fin y cremallera, todos manufacturados en metal y con módulo normalizado de $m = 0.5$. Estos elementos fueron elegidos considerando un tamaño reducido y de  relación de reducción adecuada y compatibilidad con ejes de los motores. Así como la facilidad de su integración con los mecanismos de cuatro y cinco barras empleados en cada dedo. A continuación, se presenta una descripción detallada de cada componente.
+
+% ---------------------------------------------------------
+\subsection{Engranes metálicos para reductor 2:1}
+
+Se seleccionó un par de engranes metálicos rectos para formar un reductor simple con relación de transmisión $2:1$. Este conjunto se empleará en el primer mecanismo de cinco barras encargado de transmitir el movimiento inicial proveniente del motor (véase Figuras \ref{fig::engrane} y \ref{fig::engranes}).
+
+Los engranes presentan las siguientes características:
+
+\begin{itemize}
+    \item \textbf{Engrane de 15 dientes (15T)}: Se utiliza como eslabón de entrada del mecanismo. Presenta un diámetro exterior de $8.3\,\text{mm}$ y una altura de diente de $5\,\text{mm}$. El cubo del engrane también posee una altura de $5\,\text{mm}$, suficiente para montar sobre el eje.
+    \item \textbf{Engrane de 30 dientes (30T)}: Acoplado al eslabón de salida del mecanismo de cinco barras. Su diámetro exterior es de $12\,\text{mm}$, con la misma altura de diente de $5\,\text{mm}$ y cubo de $5\,\text{mm}$. La relación de dientes permite obtener una reducción exacta de $2:1$.
+    \item \textbf{Material}: Ambos engranes están fabricados en metal, lo que incrementa la resistencia al desgaste y mejora la precisión en comparación con componentes plásticos.
+    \item \textbf{Compatibilidad}: Los engranes están mecanizados para un eje de $3\,\text{mm}$, compatible con motores tipo Pololu.
+\end{itemize}
+
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\textwidth]{imagenes/engrane.jpeg}
+    \caption{Engrane de Metal}
+    \label{fig::engrane}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{imagenes/engranes.jpeg}
+    \caption{Especificaciones de los engranes}
+    \label{fig::engranes}
+\end{figure}
+
+% ---------------------------------------------------------
+\subsection{Mecanismo de tornillo sin fin y corona}
+
+El segundo sistema seleccionado corresponde a un mecanismo de transmisión de tipo tornillo sin fin–corona, utilizado comúnmente cuando se requiere una reducción elevada en un espacio reducido o cuando se requiere transmitir el movimiento entre ejes dispuestos a 90 grados (véase Figura \ref{fig::sinfin}).
+
+Las características generales de los componentes adquiridos son:
+
+\begin{itemize}
+    \item \textbf{Corona de 15T}: Con un diámetro exterior de $8.3\,\text{mm}$, igual al engrane recto metálico de 15T para asegurar compatibilidad dimensional dentro del sistema.
+    \item \textbf{Tornillo sin fin}: El tornillo presenta un diámetro exterior de $12\,\text{mm}$ y una longitud total de $12\,\text{mm}$, permitiendo el acoplamiento con la corona. Está montado sobre un eje de $3\,\text{mm}$, adecuado para motores Pololu o ejes auxiliares.
+    \item \textbf{Módulo}: Ambos componentes están fabricados con módulo normalizado $m = 0.5$, lo que garantiza el acoplamiento entre el tornillo sin fin y la corona.
+    \item \textbf{Aplicación}: Este mecanismo se usa para transmitir el movimiento del motor al engrane colocado en el eslabón de entrada del primer mecanismo de 5 barras.
+\end{itemize}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.4\textwidth]{imagenes/sinfin.jpeg}
+    \caption{Tornillo sin fín}
+    \label{fig::sinfin}
+\end{figure}
+
+% ---------------------------------------------------------
+\subsection{Piñón–cremallera de módulo}
+
+Finalmente, se adquirió un sistema de transmisión lineal basado en un mecanismo piñón–cremallera. Este tipo de sistema permite convertir el movimiento rotacional del motor en desplazamiento lineal, útil en este mecanismo para lograr el movimiento de abducción del pulgar (véase Figura \ref{fig::cremallera}).
+
+Las características principales del conjunto son:
+
+\begin{itemize}
+    \item \textbf{Piñón de 15T}: Fabricado en metal, con módulo $0.5$ y dientes rectos. Su diámetro exterior es proporcional al de los engranes de 15T previamente descritos.
+    \item \textbf{Cremallera metálica}: De diente recto y módulo $0.5$, permitiendo la compatibilidad con el piñón.
+    \item \textbf{Aplicaciones}: Este mecanismo se utiliza para generar el desplazamiento lineal y necesario para el movimiento de abudcción del pulgar. 
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{imagenes/cremallera.jpeg}
+    \caption{Cremallera de metal}
+    \label{fig::cremallera}
+\end{figure}
