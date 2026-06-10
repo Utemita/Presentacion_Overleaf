@@ -1,0 +1,38 @@
+\frametitle{Modelo cinem\'atico del Mecanismo de 5 Barras}
+\scriptsize
+\textbf{Modelo cinem\'atico}
+
+\vspace{0.2cm}
+
+Se calcul\'o la posici\'on del efector final mediante
+la intersecci\'on de dos circunferencias.
+
+\vspace{0.2cm}
+
+\begin{lstlisting}[language=Python,basicstyle=\ttfamily\tiny]
+d = np.sqrt((Dx - Bx)**2 +
+            (Dy - By)**2)
+
+a = (l3**2 - l4**2 + d**2)/(2*d)
+
+h = np.sqrt(l3**2 - a**2)
+
+Px = Bx + a*(Dx - Bx)/d
+Py = By + a*(Dy - By)/d
+
+x = Px + h*(Dy - By)/d
+y = Py - h*(Dx - Bx)/d
+\end{lstlisting}
+
+\vspace{0.2cm}
+
+\textbf{Restricciones geom\'etricas}
+
+\begin{lstlisting}[language=Python,basicstyle=\ttfamily\tiny]
+if d > (l3 + l4):
+    return None, None
+
+if d < abs(l3 - l4):
+    return None, None
+\end{lstlisting}
+
