@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d (TeX Live 2021)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: ieeetr.bst
+Database file #1: referencias.bib
+Warning--I didn't find a database entry for "rojas2018algoritmos"
+Warning--I didn't find a database entry for "loayza2024optimizacion"
+Warning--I didn't find a database entry for "nocedal2006numerical"
+Warning--I didn't find a database entry for "abarca2015"
+Warning--I didn't find a database entry for "deb2012optimization"
+Warning--I didn't find a database entry for "goldberg1989genetic"
+Warning--I didn't find a database entry for "coello2002theoretical"
+You've used 16 entries,
+            1876 wiz_defined-function locations,
+            591 strings with 6681 characters,
+and the built_in function-call counts, 4896 in all, are:
+= -- 525
+> -- 159
+< -- 0
++ -- 60
+- -- 44
+* -- 349
+:= -- 673
+add.period$ -- 16
+call.type$ -- 16
+change.case$ -- 16
+chr.to.int$ -- 0
+cite$ -- 16
+duplicate$ -- 255
+empty$ -- 429
+format.name$ -- 44
+if$ -- 1211
+int.to.chr$ -- 0
+int.to.str$ -- 16
+missing$ -- 15
+newline$ -- 51
+num.names$ -- 16
+pop$ -- 24
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 213
+stack$ -- 0
+substring$ -- 369
+swap$ -- 133
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 54
+width$ -- 18
+write$ -- 173
+(There were 7 warnings)
