@@ -1,0 +1,292 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage[margin=2cm]{geometry}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\definecolor{codebg}{rgb}{0.95,0.95,0.95}
+\lstset{basicstyle=\ttfamily\small,backgroundcolor=\color{codebg},frame=single,breaklines=true}
+
+\title{Manual de Presentaci\'on\\Gu\'ia para Defensa de Tesis:\\Dise\~no y Construcci\'on de un Exoesqueleto\\Optimizando los Mecanismos para Agarre de Pinza Fina}
+\author{Ing. Adriana Elorza Ramos}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Introducci\'on - Qu\'e decir ante los sinodales}
+
+\subsection{Contexto cl\'inico}
+La pinza fina es la funci\'on motora que permite al pulgar e \'indice sujetar objetos peque\~nos con precisi\'on. Su deterioro, causado frecuentemente por accidentes cerebrovasculares (ACV), genera p\'erdida de independencia en actividades como escribir, comer o vestirse.
+
+\subsection{Justificaci\'on del exoesqueleto}
+Los exoesqueletos permiten ejercicios de rehabilitaci\'on repetitivos y precisos, reduciendo la carga del terapeuta. La terapia rob\'otica ha demostrado ser tan eficaz como la convencional (Fukui 2025, Ueki 2012).
+
+\subsection{Alcance del proyecto}
+Exoesqueleto de eslabones r\'igidos para los tres dedos principales del agarre de pinza fina (\'indice, medio, pulgar), con movimiento en las tres articulaciones: MCP (metacarpofalangica), PIP (interfalangica proximal) y DIP (interfalangica distal).
+
+\subsection{Por qu\'e eslabones r\'igidos}
+\begin{itemize}
+\item Control bidireccional (asiste flexi\'on Y extensi\'on)
+\item Predecibles cinem\'aticamente (modelo anal\'itico exacto)
+\item Permiten optimizaci\'on dimensional directa
+\item Los cables tienen fricci\'on variable y requieren tensores adicionales
+\end{itemize}
+
+\section{Objetivo General}
+
+Dise\~nar y construir un exoesqueleto de eslabones r\'igidos para realizar agarres de pinza fina, empleando t\'ecnicas de an\'alisis cinem\'atico y de optimizaci\'on para adaptar los par\'ametros del mecanismo a distintas medidas antropom\'etricas de la poblaci\'on mexicana.
+
+\subsection{Justificaci\'on ante sinodales}
+El movimiento del dedo humano es no lineal, resultado de la interacci\'on coordinada de m\'ultiples articulaciones. Un dise\~no por tanteo no puede reproducir esta complejidad. La optimizaci\'on permite explorar sistem\'aticamente el espacio de dise\~no (18 variables) para minimizar el error entre la trayectoria del mecanismo y la trayectoria anat\'omica real.
+
+\section{Trabajo Anterior}
+
+\subsection{Modelo CAD}
+Dise\~no 3D completo contemplando tres mecanismos (uno por dedo), sistemas de transmisi\'on (engranes, tornillo sin f\'in) y motores.
+
+\subsection{Selecci\'on de componentes}
+Se evaluaron 6 tipos de motores mediante una matriz de decisi\'on ponderada con 7 criterios: torque (20\%), velocidad (20\%), tama\~no (20\%), costo (10\%), \'angulo de giro (10\%), peso (10\%), voltaje (10\%). El micro-reductor Pololu N20 obtuvo 4.0/5.0 por su torque de 6.7 kgf$\cdot$cm y tama\~no compacto (13.6$\times$42.5 mm).
+
+\subsection{Construcci\'on}
+Piezas fabricadas mediante impresi\'on 3D (PLA/PETG). Verificaci\'on de ensamble y movimiento de cada mecanismo de forma independiente.
+
+\section{Base de Datos}
+
+\subsection{Dataset de Pizzolato et al. (2017)}
+Base de datos calibrada publicada en Scientific Data con cinem\'atica y EMG de 40 sujetos realizando diferentes tipos de agarres. Captura con CyberGlove (guante sensorizado) y marcadores \'opticos.
+
+\subsection{Extracci\'on de datos}
+Se seleccion\'o el agarre de pinza fina (125$^\circ$ de flexi\'on total). Se extrajeron los \'angulos articulares del dedo \'indice (MCP, PIP, DIP) y se calcul\'o la cinem\'atica directa:
+\begin{align}
+px_{IFP} &= F_p \cos(\theta_{MCP}) \\
+py_{IFP} &= F_p \sin(\theta_{MCP}) \\
+px_{IFD} &= px_{IFP} + F_m \cos(\theta_{MCP} + \theta_{PIP}) \\
+py_{IFD} &= py_{IFP} + F_m \sin(\theta_{MCP} + \theta_{PIP})
+\end{align}
+
+Medidas antropom\'etricas (poblaci\'on mexicana adulta): $F_p = 49$ mm, $F_m = 26$ mm, $F_d = 24$ mm.
+
+\section{Evoluci\'on del Algoritmo de Optimizaci\'on}
+
+\subsection{Fase 1: AG + Hiperheur\'istica}
+
+\textbf{Qu\'e es una hiperheur\'istica:} Una heur\'istica que selecciona o genera heur\'isticas. Decide din\'amicamente qu\'e operador gen\'etico usar: mutaci\'on suave o agresiva, cruce aritm\'etico o uniforme.
+
+\textbf{Configuraci\'on:}
+\begin{itemize}
+\item 12 variables de dise\~no
+\item Modelo cinem\'atico: 5 barras + 4 barras $\rightarrow$ posici\'on IFP
+\item Poblaci\'on: 60, Generaciones: 120, Mutaci\'on: 25\%, Cruce: 80\%
+\item Selecci\'on: torneo binario, Elitismo global
+\end{itemize}
+
+\textbf{Resultado:} Error RMS = 0.006 m (6 mm) --- insuficiente.
+
+\textbf{Problemas:}
+\begin{enumerate}
+\item Alta sensibilidad: ecuaciones de cierre frecuentemente sin soluci\'on
+\item Eslabones no realistas: longitudes $>$ 10 cm
+\item Costo computacional excesivo
+\item Hiperheur\'istica insuficiente para equilibrar trayectoria y restricciones
+\end{enumerate}
+
+\subsection{Fase 2: Transici\'on a Evoluci\'on Diferencial (DE)}
+
+\textbf{Por qu\'e DE supera a AG (Price, Storn \& Lampinen, 2005):}
+
+\begin{tabular}{lll}
+\toprule
+Aspecto & AG & DE \\
+\midrule
+Representaci\'on & Binaria o real & Vectores reales directos \\
+Mutaci\'on & Perturbaci\'on fija & Auto-adaptativa (vectores diferencia) \\
+Convergencia (18 var) & Lenta & Probada eficiente \\
+Paisaje discontinuo & Sensible & Robusto \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+\textbf{C\'omo funciona DE:}
+$$\vec{v}_i = \vec{x}_{r1} + F \cdot (\vec{x}_{r2} - \vec{x}_{r3})$$
+
+El tama\~no del paso se adapta autom\'aticamente a la escala del problema.
+
+\subsection{Fase 3: Optuna (Optimizaci\'on Bayesiana)}
+
+Framework de optimizaci\'on bayesiana (Akiba et al., KDD 2019) que usa TPE (Tree-structured Parzen Estimator).
+
+\textbf{Estrategia de 2 etapas:}
+\begin{enumerate}
+\item Optuna ejecuta 8 trials cortos (20 iteraciones c/u) buscando mejor configuraci\'on de DE (estrategia, popsize, mutaci\'on, recombinaci\'on)
+\item Con la mejor configuraci\'on, DE ejecuta 1000 iteraciones + polish con L-BFGS-B
+\end{enumerate}
+
+\subsection{Fase 4: Distancia de Chamfer}
+
+\textbf{Por qu\'e no RMS:} El RMS punto-a-punto asume correspondencia ordenada. Si hay desfase temporal, el RMS se infla aunque las formas sean similares.
+
+\textbf{Distancia de Chamfer (Borgefors, 1988):}
+$$d_{CH}(S,T) = \frac{1}{|S|}\sum_{s \in S} \min_{t \in T} \|s - t\| + \frac{1}{|T|}\sum_{t \in T} \min_{s \in S} \|t - s\|$$
+
+Ventajas: bidireccional, robusta ante diferentes densidades, tolerante a desalineamientos.
+
+\subsection{Fase 5: Correcci\'on de ``ganchos'' (exo\_14 a exo\_17)}
+\begin{enumerate}
+\item Inversi\'on temporal: datos MOCAP ven\'ian de flexi\'on m\'axima $\rightarrow$ extensi\'on; se invirtieron
+\item Recorte DIP: \'angulos negativos (hiperextensi\'on por ruido) recortados a 0$^\circ$
+\item Suavizado Savitzky-Golay: filtro polinomial (ventana 15, orden 2)
+\item Penalizaci\'on de monotonicidad: si $\theta_{fm}$ retrocede $\rightarrow$ soluci\'on descartada
+\end{enumerate}
+
+\section{Explicaci\'on Detallada del C\'odigo (exo\_17.py)}
+
+\subsection{Estructura general}
+507 l\'ineas divididas en 9 secciones: par\'ametros, carga MOCAP, funciones de evaluaci\'on, soluciones matem\'aticas, modelo cinem\'atico, funci\'on objetivo, bounds, Optuna, ejecuci\'on principal.
+
+\subsection{RESTRICCIONES (11 tipos)}
+
+\begin{enumerate}
+\item \textbf{gear\_ratio $>$ 0:} Evita divisi\'on por cero en $\theta_1 = \theta_2/\text{gear\_ratio}$
+\item \textbf{min(p[:12]) $>$ 0.005:} Fabricabilidad m\'inima de 5 mm (l\'imite de impresi\'on 3D)
+\item \textbf{hsp $>$ 0 y dsp $>$ 0:} Los soportes deben tener dimensi\'on positiva f\'isica
+\item \textbf{Cierre 1er 5 barras:} Discriminante $g^2 - 4dh \geq 0$ y denominador $\neq 0$. Si no se cumple, las barras no alcanzan a unirse.
+\item \textbf{Cierre 1er 4 barras:} Discriminante $B_1^2 - 4A_1C_1 \geq 0$. Misma raz\'on.
+\item \textbf{Cierre 2do 5 barras:} Misma restricci\'on para el segundo lazo del mecanismo.
+\item \textbf{Cierre 2do 4 barras:} Misma restricci\'on para el segundo lazo.
+\item \textbf{Anti-gancho:} $\Delta\theta_{fm} \geq -0.5^\circ$ entre pasos consecutivos. Un dedo real no retrocede durante el cierre.
+\item \textbf{Espacio de trabajo:} $|px_{tip}| < 0.3$ m, $|py_{tip}| < 0.3$ m, sin NaN. Valores fuera indican geometr\'ia degenerada.
+\item \textbf{Bounds:} 18 variables dentro de l\'imites (manejado internamente por scipy DE).
+\item \textbf{Penalizaci\'on de monotonicidad:} $W_{MONO} = 5.0$ aplicada a IFD y TIP en la funci\'on fitness.
+\end{enumerate}
+
+\textbf{Por qu\'e existen:}
+\begin{itemize}
+\item Restricciones de cierre (4--7): Si no se cumplen, el mecanismo \textbf{no puede ensamblarse} f\'isicamente. Las barras no alcanzan a unirse.
+\item Monotonicidad (8, 11): Un dedo real no retrocede durante el cierre. Una trayectoria con ``ganchos'' es f\'isicamente imposible.
+\item Fabricabilidad (2, 3): Eslabones menores a 5 mm no se pueden fabricar con precisi\'on.
+\item Bounds (10): Dimensiones mayores a 120 mm exceden el tama\~no de la mano humana.
+\end{itemize}
+
+\subsection{PESOS en la funci\'on objetivo}
+
+\begin{lstlisting}
+W_IFP  = 0.25    # Peso articulacion IFP
+W_IFD  = 0.375   # Peso articulacion IFD
+W_TIP  = 0.375   # Peso punta del dedo
+W_MONO = 5.0     # Penalizacion monotonicidad
+\end{lstlisting}
+
+\textbf{Por qu\'e IFP tiene MENOS peso (0.25):}
+\begin{itemize}
+\item La articulaci\'on IFP tiene trayectoria relativamente simple (arco circular)
+\item Es la m\'as cercana al actuador, m\'as f\'acil de replicar
+\item En versiones intermedias ya converg\'ia bien; el problema era IFD y TIP
+\end{itemize}
+
+\textbf{Por qu\'e IFD y TIP tienen M\'AS peso (0.375):}
+\begin{itemize}
+\item Son articulaciones distales donde se acumulan errores de toda la cadena
+\item Presentaban los ``ganchos'' (inversiones de trayectoria)
+\item Para pinza fina, la posici\'on de la PUNTA es lo m\'as cr\'itico (hace contacto con el objeto)
+\end{itemize}
+
+\textbf{Por qu\'e $W_{MONO} = 5.0$:}
+\begin{itemize}
+\item Peso alto porque ganchos son F\'ISICAMENTE IMPOSIBLES
+\item Determinado experimentalmente: $< 3.0$ aparec\'ian ganchos; $> 8.0$ convergencia muy lenta
+\item Valor 5.0 es el balance \'optimo entre suavidad y velocidad de convergencia
+\end{itemize}
+
+\subsection{Modelo cinem\'atico paso a paso}
+
+Para cada \'angulo de entrada $\theta_2$ (de 0$^\circ$ a 85$^\circ$, 120 puntos):
+\begin{enumerate}
+\item C\'alculo de $\theta_1 = \theta_2 / \text{gear\_ratio} + \text{offset}$
+\item \textbf{1er 5 barras:} Resuelve punto P mediante ecuaci\'on cuadr\'atica (intersecci\'on de circunferencias)
+\item \textbf{1er 4 barras:} Calcula $\theta_4$ mediante m\'etodo de semi-tangente $\rightarrow$ posici\'on IFP
+\item \textbf{Soportes:} Calcula posiciones de soporte de falange proximal ($c_1$, $\theta_{ps1}$, $rs_2$, $\theta_{aux,s2}$)
+\item \textbf{2do 5 barras:} En sistema de referencia rotado $\rightarrow$ punto P2
+\item \textbf{2do 4 barras:} Obtiene $\theta_{fm}$, $\theta_{fd}$ (\'angulos de falanges media y distal)
+\item \textbf{Posiciones cartesianas:} $IFD = F_m \cos(\theta_{fm}) + IFP$, $TIP = F_d \cos(\theta_{fd}) + IFD$
+\item \textbf{Verificaci\'on:} anti-gancho y espacio de trabajo
+\end{enumerate}
+
+\subsection{Funci\'on fitness}
+\begin{enumerate}
+\item Ejecuta \texttt{run\_kinematics} (si retorna None $\rightarrow$ fitness = 1000.0)
+\item Concatena puntos MOCAP y simulados (IFP + IFD + TIP)
+\item Procrustes: encuentra R, t \'optimos mediante SVD
+\item Aplica transformaci\'on r\'igida a puntos simulados
+\item Calcula Chamfer distance por articulaci\'on
+\item Calcula penalizaci\'on de monotonicidad en IFD y TIP
+\item Retorna: $0.25 \cdot err_{IFP} + 0.375 \cdot err_{IFD} + 0.375 \cdot err_{TIP} + 5.0 \cdot (mono_{IFD} + mono_{TIP})$
+\end{enumerate}
+
+\section{Resultados Finales}
+
+\subsection{Par\'ametros optimizados}
+
+\begin{tabular}{clcc}
+\toprule
+\# & Par\'ametro & Valor & Bounds \\
+\midrule
+1 & Bancada1 & 71.18 mm & [15, 120] mm \\
+2 & Bancada2 & 53.86 mm & [15, 120] mm \\
+3 & Link1 & 17.68 mm & [10, 120] mm \\
+4 & Link2 & 81.94 mm & [10, 120] mm \\
+5 & Link3 & 21.43 mm & [10, 120] mm \\
+6 & Link4 & 67.01 mm & [10, 120] mm \\
+7 & Link5 & 50.29 mm & [10, 120] mm \\
+8 & Link6 & 23.68 mm & [10, 120] mm \\
+9 & Link7 & 34.60 mm & [10, 120] mm \\
+10 & Link8 & 80.38 mm & [10, 120] mm \\
+11 & Link9 & 48.27 mm & [10, 120] mm \\
+12 & Link10 & 64.50 mm & [10, 120] mm \\
+13 & hsp & 57.28 mm & [-40, 80] mm \\
+14 & dsp & 24.49 mm & [5, 80] mm \\
+15 & $\theta_{aux,FM}$ & 0.8931 rad & [0, $\pi$] \\
+16 & $\theta_{aux,FD}$ & 0.3582 rad & [0, $\pi$] \\
+17 & Rel. engranaje & 1.7281 & [1.0, 8.0] \\
+18 & $\theta_{offset}$ & $-$2.0149 rad & [$-\pi$, $\pi$] \\
+\bottomrule
+\end{tabular}
+
+\subsection{Comparaci\'on de resultados}
+\begin{tabular}{lcc}
+\toprule
+M\'etrica & AG + Hiperheur\'istica & DE + Optuna \\
+\midrule
+Error global & 6 mm & $<$ 1 mm \\
+Eslabones & No realistas ($>$10 cm) & Dentro de bounds \\
+Ganchos & Presentes & Eliminados \\
+\bottomrule
+\end{tabular}
+
+\section{Preguntas Frecuentes de Sinodales}
+
+\begin{enumerate}
+\item \textbf{?`Por qu\'e 18 variables?} El mecanismo compuesto (2 lazos 5B + 2 lazos 4B) necesita todas para describir completamente la geometr\'ia y el acoplamiento.
+\item \textbf{?`C\'omo garantizas \'optimo global?} No se garantiza en metaheur\'istica. Sin embargo, m\'ultiples configuraciones de Optuna + polish L-BFGS-B dan buena cobertura. El error sub-milim\'etrico est\'a cerca del l\'imite del ruido del sensor.
+\item \textbf{?`Para qu\'e la relaci\'on de engranaje?} Permite que un motor con rango limitado cubra el rango completo de flexi\'on del dedo (0--85$^\circ$ de entrada $\rightarrow$ 0--49$^\circ$ de MCP).
+\item \textbf{?`Qu\'e pasa si cambias medidas antropom\'etricas?} Se re-ejecuta el algoritmo con nuevos $F_p$, $F_m$, $F_d$. Esa es la ventaja principal del enfoque de optimizaci\'on.
+\item \textbf{?`Por qu\'e Chamfer y no Fr\'echet?} Chamfer tiene costo $O(nm)$ vs $O(n^2m^2)$ de Fr\'echet. Con Procrustes + monotonicidad, Chamfer da resultados comparables.
+\end{enumerate}
+
+\section{Trabajo Futuro}
+\begin{enumerate}
+\item Armar modelo CAD con las 18 dimensiones optimizadas
+\item Validar estudio de movimiento en software CAD vs trayectorias MOCAP
+\item Reconstruir prototipo f\'isico con nuevas medidas (impresi\'on 3D)
+\item Repetir optimizaci\'on para dedos medio y pulgar
+\item Pruebas funcionales del exoesqueleto completo
+\end{enumerate}
+
+\end{document}

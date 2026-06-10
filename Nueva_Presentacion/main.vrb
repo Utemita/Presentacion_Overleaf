@@ -1,0 +1,26 @@
+\frametitle{C\'odigo: Funci\'on Objetivo (\texttt {exo\_17.py})}
+\begin{lstlisting}[style=pythonstyle,basicstyle=\ttfamily\tiny]
+def fitness_function(p):
+    sim_data = run_kinematics(p, theta_input)
+    if sim_data is None:
+        return 1000.0
+    # Alineacion Procrustes (rotacion + traslacion)
+    all_mocap = np.vstack([mocap_pts[k] for k in ('ifp','ifd','tip')])
+    all_sim   = np.vstack([sim_data[k]  for k in ('ifp','ifd','tip')])
+    R, t = optimal_rigid_transform(all_mocap, all_sim)
+    aligned = {k: apply_transform(sim_data[k], R, t)
+               for k in ('ifp', 'ifd', 'tip')}
+    # Distancia de Chamfer por articulacion
+    err_ifp = chamfer_distance(mocap_pts['ifp'], aligned['ifp'])
+    err_ifd = chamfer_distance(mocap_pts['ifd'], aligned['ifd'])
+    err_tip = chamfer_distance(mocap_pts['tip'], aligned['tip'])
+    # Penalizacion de monotonicidad (anti-gancho)
+    mono_ifd = monotonicity_penalty(aligned['ifd'])
+    mono_tip = monotonicity_penalty(aligned['tip'])
+    shape_error = 0.25*err_ifp + 0.375*err_ifd + 0.375*err_tip
+    return shape_error + 5.0*(mono_ifd + mono_tip)
+\end{lstlisting}
+    \scriptsize
+    \vspace{0.1cm}
+    \textbf{18 variables de dise\~no:} longitudes de eslabones, offsets angulares, relaci\'on de engranaje.\\
+    \textbf{Bounds:} 0.01--0.12\,m (eslabones), par\'ametros angulares en $[0, \pi]$.
